@@ -10,7 +10,7 @@ export function Navbar() {
           <div className="leading-tight">
             <div className="text-base font-bold tracking-tight text-text">Wisio</div>
             <div className="text-[10.5px] font-medium uppercase tracking-wide text-text-muted">
-              Wisdom, Byte by Byte
+              Learn the Basics. Build Your Wisdom.
             </div>
           </div>
         </NavLink>

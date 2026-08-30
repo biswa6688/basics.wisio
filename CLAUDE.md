@@ -4,7 +4,9 @@ Project-specific instructions for Claude (or any coding agent) working in this r
 
 ## What this project is
 
-Wisio — an illustrated React + TypeScript web app teaching computer fundamentals. Full context in [README.md](./README.md), [ARCHITECTURE.md](./ARCHITECTURE.md), [MEMORY.md](./MEMORY.md).
+Wisio — an illustrated React + TypeScript web app teaching computer fundamentals. Full context in [README.md](./README.md), [ARCHITECTURE.md](./doc/ARCHITECTURE.md), [MEMORY.md](./doc/MEMORY.md).
+
+**Doc layout**: only `README.md`, `CLAUDE.md`, and `AGENTS.md` live at repo root (convention/tooling expects them there). Every other doc lives in `doc/` (`doc/ARCHITECTURE.md`, `doc/FEATURES.md`, `doc/DECISIONS/`, etc.). A new doc file is created in `doc/` unless there's a specific reason it must be at root.
 
 ## Hard rules
 

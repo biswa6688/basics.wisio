@@ -1,4 +1,4 @@
-# Wisio — Wisdom, Byte by Byte
+# Wisio — Learn the Basics. Build Your Wisdom.
 
 Wisio is an illustrated, interactive web app that teaches computer fundamentals through rich infographics rather than walls of text.
 
@@ -9,24 +9,24 @@ Wisio is an illustrated, interactive web app that teaches computer fundamentals 
 
 | Doc | Covers |
 |---|---|
-| [ARCHITECTURE.md](./ARCHITECTURE.md) | How the app is structured, theming, content model, visual language |
-| [DESIGN_SYSTEM.md](./DESIGN_SYSTEM.md) | Color/typography/spacing/radius/motion/icon tokens |
-| [CONTENT_GUIDELINES.md](./CONTENT_GUIDELINES.md) | How to write a lesson, which component to use when |
-| [ILLUSTRATION_GUIDELINES.md](./ILLUSTRATION_GUIDELINES.md) | In-lesson diagram style vs. marketing-infographic style |
-| [ACCESSIBILITY.md](./ACCESSIBILITY.md) | What's implemented, known gaps |
-| [PERFORMANCE.md](./PERFORMANCE.md) | Bundle sizes, targets, backlog |
-| [TESTING.md](./TESTING.md) | Vitest setup, coverage, conventions |
-| [SECURITY.md](./SECURITY.md) | Threat surface, dependency practices |
-| [SEO.md](./SEO.md) | What's in place, SPA limitations |
-| [FEATURES.md](./FEATURES.md) | What's shipped |
-| [BACKLOG.md](./BACKLOG.md) | What's planned |
-| [TASKS.md](./TASKS.md) | Active work |
-| [CHANGELOG.md](./CHANGELOG.md) | Version history |
-| [MEMORY.md](./MEMORY.md) | Decisions and context not obvious from code |
-| [DEPLOYMENT.md](./DEPLOYMENT.md) | How to ship it |
-| [CONTRIBUTING.md](./CONTRIBUTING.md) | Contributor workflow |
+| [ARCHITECTURE.md](./doc/ARCHITECTURE.md) | How the app is structured, theming, content model, visual language |
+| [DESIGN_SYSTEM.md](./doc/DESIGN_SYSTEM.md) | Color/typography/spacing/radius/motion/icon tokens |
+| [CONTENT_GUIDELINES.md](./doc/CONTENT_GUIDELINES.md) | How to write a lesson, which component to use when |
+| [ILLUSTRATION_GUIDELINES.md](./doc/ILLUSTRATION_GUIDELINES.md) | In-lesson diagram style vs. marketing-infographic style |
+| [ACCESSIBILITY.md](./doc/ACCESSIBILITY.md) | What's implemented, known gaps |
+| [PERFORMANCE.md](./doc/PERFORMANCE.md) | Bundle sizes, targets, backlog |
+| [TESTING.md](./doc/TESTING.md) | Vitest setup, coverage, conventions |
+| [SECURITY.md](./doc/SECURITY.md) | Threat surface, dependency practices |
+| [SEO.md](./doc/SEO.md) | What's in place, SPA limitations |
+| [FEATURES.md](./doc/FEATURES.md) | What's shipped |
+| [BACKLOG.md](./doc/BACKLOG.md) | What's planned |
+| [TASKS.md](./doc/TASKS.md) | Active work |
+| [CHANGELOG.md](./doc/CHANGELOG.md) | Version history |
+| [MEMORY.md](./doc/MEMORY.md) | Decisions and context not obvious from code |
+| [DEPLOYMENT.md](./doc/DEPLOYMENT.md) | How to ship it |
+| [CONTRIBUTING.md](./doc/CONTRIBUTING.md) | Contributor workflow |
 | [CLAUDE.md](./CLAUDE.md) / [AGENTS.md](./AGENTS.md) | Hard rules for any coding agent working in this repo |
-| [DECISIONS/](./DECISIONS/) | ADRs for significant architectural/design decisions |
+| [DECISIONS/](./doc/DECISIONS/) | ADRs for significant architectural/design decisions |
 
 ## Getting started
 
@@ -57,7 +57,7 @@ src/
 
 ## Content workflow
 
-Each topic lesson is a self-contained feature: a page under `src/pages/topics/`, registered in `src/pages/topics/registry.tsx`. See [CONTENT_GUIDELINES.md](./CONTENT_GUIDELINES.md) for how to structure one, [FEATURES.md](./FEATURES.md) for what exists today, and [BACKLOG.md](./BACKLOG.md) for what's planned.
+Each topic lesson is a self-contained feature: a page under `src/pages/topics/`, registered in `src/pages/topics/registry.tsx`. See [CONTENT_GUIDELINES.md](./doc/CONTENT_GUIDELINES.md) for how to structure one, [FEATURES.md](./doc/FEATURES.md) for what exists today, and [BACKLOG.md](./doc/BACKLOG.md) for what's planned.
 
 Per project convention (see [CLAUDE.md](./CLAUDE.md)), every new feature commit updates the relevant docs in the same commit, and prior valid work is committed and pushed before starting the next feature.
 

@@ -13,14 +13,14 @@ const highlights = [
 ]
 
 export function Home() {
-  useDocumentTitle('Wisio — Wisdom, Byte by Byte')
+  useDocumentTitle('Wisio — Learn the Basics. Build Your Wisdom.')
 
   return (
     <div>
       <section className="mx-auto grid max-w-6xl items-center gap-10 px-4 py-14 sm:px-6 lg:grid-cols-2 lg:py-20">
         <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
           <span className="inline-flex items-center gap-1.5 rounded-full bg-primary-100 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-primary-700 dark:bg-primary-950 dark:text-primary-300">
-            Wisdom, Byte by Byte
+            Learn the Basics. Build Your Wisdom.
           </span>
           <h1 className="mt-4 text-4xl font-bold leading-[1.1] tracking-tight text-text sm:text-5xl">
             Learn how computers <span className="text-primary-600 dark:text-primary-400">really work</span>

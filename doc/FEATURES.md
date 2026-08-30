@@ -12,11 +12,12 @@ Status snapshot of what exists in the app today. Updated in the same commit as a
 | Topics index | Grid of all 6 topics with accent-colored cards | `src/pages/TopicsIndex.tsx`, `src/components/content/TopicCard.tsx` |
 | Topic page shell | Per-topic header (icon, title, tagline, description) + content slot, "coming soon" fallback | `src/pages/TopicPage.tsx`, `src/components/content/TopicLayout.tsx` |
 | Content component kit | `InfoCard`, `StepFlow` reusable building blocks for lesson content | `src/components/content/` |
-| Brand | Wisio logo/favicon, tagline "Wisdom, Byte by Byte", green primary palette | `public/wisio.svg`, `src/index.css` |
+| Brand | Wisio logo/favicon, tagline "Learn the Basics. Build Your Wisdom.", green primary palette | `public/wisio.svg`, `src/index.css` |
+| Marketing poster | Reference-matched shareable summary infographic (self-contained SVG, not theme-reactive by design) | `src/components/marketing/SummaryInfographic.tsx` — currently unwired from any page, ready to embed |
 | Design system v2 | Professional/educational visual register: Lucide icons (no emoji), Inter typography, tinted-accent diagram style, tightened radii | `src/data/topicIcons.tsx`, `index.html`, all `components/illustrations/*` |
 | Educational component system | Reusable lesson-building primitives: callouts (DidYouKnow/ImportantNote/Warning/RealWorldExample), KeyTakeaways, DefinitionCard, Comparison, Timeline, AnatomyDiagram, GlossaryTerm, quiz kit (MultipleChoice/TrueFalse/Quiz/AnswerReveal), FlashCard, RelatedTopics, LearningPath (prev/next + progress dots), progress tracking (localStorage-backed mark-complete + summary bar) | `src/components/education/*`, `src/hooks/useProgress.ts` |
 | Test suite | Vitest + React Testing Library covering theme persistence/DOM effects, progress tracking, document-title hook, bit-math correctness, and quiz interaction | `vite.config.ts` (`test` block), `src/test/setup.ts`, `*.test.tsx` files colocated with source |
-| Full documentation set | Design system, content/illustration guidelines, accessibility/performance/testing/security/SEO docs, contributing guide, and an ADR log | See the table in [README.md](./README.md) |
+| Full documentation set | Design system, content/illustration guidelines, accessibility/performance/testing/security/SEO docs, contributing guide, and an ADR log | See the table in [README.md](../README.md) |
 | Reduced motion | All Framer Motion animations respect OS "reduce motion" setting app-wide | `src/main.tsx` (`MotionConfig reducedMotion="user"`) |
 | Per-page titles | Browser tab title updates per route (home / topics index / each lesson) | `src/hooks/useDocumentTitle.ts` |
 

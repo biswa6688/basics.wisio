@@ -8,7 +8,7 @@ Wisio is a static client-only SPA: no backend, no database, no authentication, n
 
 - **No API keys or secrets belong in this repository, ever.** Nothing in the app calls a third-party API that requires one. (An unrelated, optional Claude Code skill for generating marketing-style infographics does use a Gemini API key — that key lives in the skill's own `.env` outside this repo and is never referenced from app code. See [MEMORY.md](./MEMORY.md).)
 - **No `dangerouslySetInnerHTML` or raw HTML injection** anywhere in the app — all content is authored as JSX/TSX, so there's no XSS surface from user-supplied content (there is no user-supplied content).
-- **Dependencies**: kept to a deliberately short, mainstream list (React, React Router, Framer Motion, Tailwind, Lucide, Vitest/RTL for dev). No dependency is added without a concrete reason — see [CLAUDE.md](./CLAUDE.md) rule 1.
+- **Dependencies**: kept to a deliberately short, mainstream list (React, React Router, Framer Motion, Tailwind, Lucide, Vitest/RTL for dev). No dependency is added without a concrete reason — see [CLAUDE.md](../CLAUDE.md) rule 1.
 - **External requests at runtime**: only the Google Fonts stylesheet/font files (`index.html`). No analytics, no tracking scripts, no third-party embeds.
 
 ## Practices

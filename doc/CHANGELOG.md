@@ -6,6 +6,7 @@ All notable changes to this project. Format loosely follows [Keep a Changelog](h
 
 ### Added
 
+- Marketing poster: a reference-matched, self-contained SVG summary infographic (`src/components/marketing/SummaryInfographic.tsx`) — not currently embedded in any page
 - Full documentation set: `DESIGN_SYSTEM.md`, `CONTENT_GUIDELINES.md`, `ILLUSTRATION_GUIDELINES.md`, `ACCESSIBILITY.md`, `PERFORMANCE.md`, `TESTING.md`, `SECURITY.md`, `SEO.md`, `CONTRIBUTING.md`, and an ADR log (`DECISIONS/ADR-0001` through `ADR-0003`) covering the SPA-over-SSR, icon-system, and progress-tracking decisions
 - Test suite: Vitest + React Testing Library, covering `ThemeProvider`/`ThemeToggle` persistence and DOM effects, `useProgress`, `useDocumentTitle`, `BitGrid` bit-math correctness, and `MultipleChoice` interaction (15 tests). `npm test` / `npm run test:watch`.
 - Educational component system: `DidYouKnow`, `ImportantNote`, `Warning`, `RealWorldExample` (shared `Callout` base), `KeyTakeaways`, `DefinitionCard`, `Comparison`, `Timeline`, `AnatomyDiagram`, `GlossaryTerm`, a quiz kit (`MultipleChoice`, `TrueFalse`, `Quiz`, `AnswerReveal`), `FlashCard`, `RelatedTopics`, and `LearningPath` (prev/next lesson nav with progress dots)
@@ -33,4 +34,6 @@ All notable changes to this project. Format loosely follows [Keep a Changelog](h
 
 ### Changed
 
+- Tagline updated app-wide from "Wisdom, Byte by Byte" to "Learn the Basics. Build Your Wisdom." (nav, footer, hero badge, document titles, poster, docs) per explicit user preference
+- Documentation restructured: only `README.md`, `CLAUDE.md`, `AGENTS.md` remain at repo root; every other doc moved into `doc/` (with `git mv`, preserving history)
 - Complete visual redesign from a "childish" first pass to a professional/educational register: replaced all emoji UI icons with `lucide-react` line icons, replaced solid pastel-fill illustration blocks with outlined/tinted diagram style, tightened border-radius across cards/buttons/badges, replaced pill-shaped nav/CTA with underline nav + flat buttons, and loaded real Inter typography. Owl mascot logo kept unchanged by explicit user decision.

@@ -20,5 +20,5 @@ Emoji render inconsistently across platforms, carry informal/casual connotations
 
 ## Consequences
 
-- Every new UI icon must come from `lucide-react` — see [CLAUDE.md](../CLAUDE.md) rule 3 and [DESIGN_SYSTEM.md](../DESIGN_SYSTEM.md).
+- Every new UI icon must come from `lucide-react` — see [CLAUDE.md](../../CLAUDE.md) rule 3 and [DESIGN_SYSTEM.md](../DESIGN_SYSTEM.md).
 - The owl mascot logo (`public/wisio.svg`) was explicitly *not* changed as part of this decision — the user chose to keep it as-is despite it being the most "playful" single element, on the reasoning that the rest of the UI's register would compensate. This is a deliberate, revisitable choice, not an oversight.

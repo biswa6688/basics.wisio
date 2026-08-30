@@ -6,7 +6,7 @@ export function Footer() {
           <img src="/wisio.svg" alt="Wisio logo" className="h-6 w-6" />
           <span className="font-semibold text-text">Wisio</span>
         </div>
-        <p className="text-sm text-text-muted">Wisdom, Byte by Byte — computer fundamentals, made visual.</p>
+        <p className="text-sm text-text-muted">Learn the Basics. Build Your Wisdom.</p>
         <p className="text-xs text-text-muted/70">© {new Date().getFullYear()} Wisio. Built for curious minds.</p>
       </div>
     </footer>

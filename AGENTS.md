@@ -4,7 +4,9 @@ Tool-agnostic version of [CLAUDE.md](./CLAUDE.md) — same rules, for any AI cod
 
 ## Project
 
-Wisio — illustrated React + TypeScript app teaching computer fundamentals. See [README.md](./README.md) and [ARCHITECTURE.md](./ARCHITECTURE.md) first.
+Wisio — illustrated React + TypeScript app teaching computer fundamentals. See [README.md](./README.md) and [ARCHITECTURE.md](./doc/ARCHITECTURE.md) first.
+
+Doc layout: only `README.md`, `CLAUDE.md`, `AGENTS.md` live at root — everything else is in `doc/` (`doc/ARCHITECTURE.md`, `doc/DECISIONS/`, etc.).
 
 ## Rules
 

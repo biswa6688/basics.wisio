@@ -34,7 +34,7 @@ A change isn't done until:
 
 ## Git workflow
 
-This project commits and pushes each feature individually — see [CLAUDE.md](./CLAUDE.md) rule 5. Don't batch multiple unrelated features into one commit, and don't start a new feature on top of a prior one's uncommitted work.
+This project commits and pushes each feature individually — see [CLAUDE.md](../CLAUDE.md) rule 5. Don't batch multiple unrelated features into one commit, and don't start a new feature on top of a prior one's uncommitted work.
 
 ## Commit messages
 
