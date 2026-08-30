@@ -10,13 +10,15 @@ describe('ThemeToggle', () => {
     document.documentElement.classList.remove('dark')
   })
 
-  it('defaults to System when no preference is stored', () => {
+  it('defaults to System selected when no preference is stored', () => {
     render(
       <ThemeProvider>
         <ThemeToggle />
       </ThemeProvider>,
     )
-    expect(screen.getByRole('button', { name: /change theme/i })).toHaveTextContent('System')
+    expect(screen.getByRole('radio', { name: 'System' })).toHaveAttribute('aria-checked', 'true')
+    expect(screen.getByRole('radio', { name: 'Dark' })).toHaveAttribute('aria-checked', 'false')
+    expect(screen.getByRole('radio', { name: 'Light' })).toHaveAttribute('aria-checked', 'false')
   })
 
   it('switches to Dark, applies the dark class, and persists the choice', async () => {
@@ -27,10 +29,25 @@ describe('ThemeToggle', () => {
       </ThemeProvider>,
     )
 
-    await user.click(screen.getByRole('button', { name: /change theme/i }))
-    await user.click(screen.getByRole('button', { name: 'Dark' }))
+    await user.click(screen.getByRole('radio', { name: 'Dark' }))
 
     expect(document.documentElement.classList.contains('dark')).toBe(true)
     expect(window.localStorage.getItem('wisio-theme-preference')).toBe('dark')
+    expect(screen.getByRole('radio', { name: 'Dark' })).toHaveAttribute('aria-checked', 'true')
+  })
+
+  it('switches to Light and removes the dark class', async () => {
+    const user = userEvent.setup()
+    render(
+      <ThemeProvider>
+        <ThemeToggle />
+      </ThemeProvider>,
+    )
+
+    await user.click(screen.getByRole('radio', { name: 'Dark' }))
+    await user.click(screen.getByRole('radio', { name: 'Light' }))
+
+    expect(document.documentElement.classList.contains('dark')).toBe(false)
+    expect(window.localStorage.getItem('wisio-theme-preference')).toBe('light')
   })
 })

@@ -20,6 +20,14 @@ export default function InputOutput() {
         <div className="rounded-xl border border-border bg-bg-subtle p-6">
           <IoFlow />
         </div>
+        <div className="mt-5">
+          <RealWorldExample title="Booking a seat, step by step">
+            You fill in a name, date, and destination — that's the input. The system checks which seats are
+            still free and matches your request against them — that's the process. A confirmation (or a "fully
+            booked" message) comes back — that's the output. Swap "seats" for library books, hotel rooms, or
+            food orders and the exact same three-step pattern still holds.
+          </RealWorldExample>
+        </div>
       </Section>
 
       <Section title="Two directions, one goal: moving information">

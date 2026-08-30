@@ -46,6 +46,51 @@ export default function HowComputersWork() {
         <MemoryHierarchy />
       </Section>
 
+      <Section title="Hardware and software">
+        <p className="mb-5 text-sm text-text-muted">
+          Everything in a computer falls into one of two categories: the physical parts you can touch, and the
+          instructions that tell those parts what to do.
+        </p>
+        <div className="grid gap-4 sm:grid-cols-2">
+          <InfoCard icon={<CpuIcon className="h-4 w-4" strokeWidth={1.75} />} title="Hardware" accent="#16a34a">
+            The physical components — CPU, memory, storage, screen, keyboard. If you can touch it, it's hardware.
+          </InfoCard>
+          <InfoCard icon={<HardDrive className="h-4 w-4" strokeWidth={1.75} />} title="Software" accent="#0891b2">
+            The instructions hardware runs — from the operating system to the app you're using right now.
+          </InfoCard>
+        </div>
+      </Section>
+
+      <Section title="Why computers help — and where they fall short">
+        <p className="mb-5 text-sm text-text-muted">
+          A computer isn't just fast — it's fast, consistent, and tireless in ways people aren't. But that same
+          rigidity is also its biggest weakness.
+        </p>
+        <Comparison
+          sides={[
+            {
+              label: 'What computers are good at',
+              accent: '#16a34a',
+              points: [
+                'Speed — billions of operations every second',
+                'Accuracy — no fatigue-driven mistakes',
+                'Consistency — the same input always gives the same output',
+                'Tirelessly repeating the same task for hours',
+              ],
+            },
+            {
+              label: 'Where they fall short',
+              accent: '#0c6e31',
+              points: [
+                "Can't improvise outside what they were explicitly told to do",
+                'A situation nobody programmed for causes errors, not creativity',
+                'No judgment — they follow instructions exactly, even bad ones',
+              ],
+            },
+          ]}
+        />
+      </Section>
+
       <Section title="SSD vs HDD">
         <p className="mb-5 text-sm text-text-muted">
           Both are long-term storage, but they work very differently — which is why swapping an HDD for an
@@ -80,7 +125,9 @@ export default function HowComputersWork() {
       <KeyTakeaways
         items={[
           'The CPU, memory, and storage form the core loop every program runs on.',
+          'Hardware is the physical machine; software is the instructions it runs.',
           'Fetch-decode-execute repeats billions of times per second.',
+          'Computers win on speed, accuracy, and consistency — but can\'t improvise beyond their instructions.',
           'Faster memory is more expensive and holds less — hence the speed/size hierarchy.',
           'SSDs beat HDDs on speed and durability by having no moving parts.',
         ]}
