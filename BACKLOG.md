@@ -4,7 +4,6 @@ Not scheduled yet, or planned beyond the current milestone. Ordered roughly by p
 
 ## v1 — core topic content (in progress)
 
-- [ ] Number Systems lesson — binary/decimal/hex converter visual, place-value grid illustration
 - [ ] How a Computer Works lesson — fetch-decode-execute animated flow, memory hierarchy pyramid
 - [ ] Input & Output Devices lesson — device gallery grouped by input/output/both
 - [ ] Operating Systems lesson — process/memory/file manager layers diagram

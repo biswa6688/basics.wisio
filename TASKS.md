@@ -15,11 +15,11 @@ Active/near-term work only. Long-range items live in [BACKLOG.md](./BACKLOG.md).
 - [x] Reusable content components: InfoCard, StepFlow, TopicLayout
 - [x] Project documentation set (this file and its siblings)
 - [x] Git repo initialized, connected to `origin`, scaffold pushed
+- [x] Number Systems lesson content + illustrations
 
 ## Next up (build one at a time, commit + push before starting the next)
 
-1. [ ] Number Systems lesson content + illustrations
-2. [ ] How a Computer Works lesson content + illustrations
+1. [ ] How a Computer Works lesson content + illustrations
 3. [ ] Input & Output Devices lesson content + illustrations
 4. [ ] Operating Systems lesson content + illustrations
 5. [ ] Networking Basics lesson content + illustrations

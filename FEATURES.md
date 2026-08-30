@@ -18,7 +18,7 @@ Status snapshot of what exists in the app today. Updated in the same commit as a
 
 | Topic | Slug | Status |
 |---|---|---|
-| Number Systems | `number-systems` | Not started |
+| Number Systems | `number-systems` | Shipped |
 | How a Computer Works | `how-computers-work` | Not started |
 | Input & Output Devices | `input-output` | Not started |
 | Operating Systems | `operating-systems` | Not started |
@@ -26,3 +26,9 @@ Status snapshot of what exists in the app today. Updated in the same commit as a
 | Internet Basics | `internet-basics` | Not started |
 
 See [BACKLOG.md](./BACKLOG.md) for planned scope of each, and [TASKS.md](./TASKS.md) for the active work item.
+
+### Number Systems (`number-systems`)
+
+Why binary is used in hardware, a keystroke-to-bit-pattern step flow, an interactive-looking bit grid that builds the byte for 202, and a binary/decimal/hex side-by-side comparison.
+
+Key files: `src/pages/topics/number-systems.tsx`, `src/components/illustrations/BitGrid.tsx`, `src/components/illustrations/BaseCompare.tsx`

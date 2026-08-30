@@ -6,6 +6,7 @@ All notable changes to this project. Format loosely follows [Keep a Changelog](h
 
 ### Added
 
+- Number Systems lesson: binary-as-hardware explainer, keystroke-to-bit-pattern step flow, animated place-value bit grid, binary/decimal/hex side-by-side comparison
 - Initial project scaffold: Vite + React 19 + TypeScript
 - Tailwind CSS v4 with green primary brand palette, light/dark/system theme tokens
 - Theme system (`ThemeProvider`) with localStorage persistence and flash-free initial load

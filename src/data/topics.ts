@@ -10,7 +10,7 @@ export const topics: Topic[] = [
   {
     slug: 'number-systems',
     title: 'Number Systems',
-    tagline: 'Binary, decimal, hex — one idea, four costumes',
+    tagline: 'Binary, decimal, hex — one idea, three costumes',
     description:
       'See how computers count using only 0 and 1, and how binary, decimal, and hexadecimal are just different lenses on the same value.',
     accent: '#16a34a',
