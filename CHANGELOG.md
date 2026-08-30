@@ -6,6 +6,7 @@ All notable changes to this project. Format loosely follows [Keep a Changelog](h
 
 ### Added
 
+- Full documentation set: `DESIGN_SYSTEM.md`, `CONTENT_GUIDELINES.md`, `ILLUSTRATION_GUIDELINES.md`, `ACCESSIBILITY.md`, `PERFORMANCE.md`, `TESTING.md`, `SECURITY.md`, `SEO.md`, `CONTRIBUTING.md`, and an ADR log (`DECISIONS/ADR-0001` through `ADR-0003`) covering the SPA-over-SSR, icon-system, and progress-tracking decisions
 - Test suite: Vitest + React Testing Library, covering `ThemeProvider`/`ThemeToggle` persistence and DOM effects, `useProgress`, `useDocumentTitle`, `BitGrid` bit-math correctness, and `MultipleChoice` interaction (15 tests). `npm test` / `npm run test:watch`.
 - Educational component system: `DidYouKnow`, `ImportantNote`, `Warning`, `RealWorldExample` (shared `Callout` base), `KeyTakeaways`, `DefinitionCard`, `Comparison`, `Timeline`, `AnatomyDiagram`, `GlossaryTerm`, a quiz kit (`MultipleChoice`, `TrueFalse`, `Quiz`, `AnswerReveal`), `FlashCard`, `RelatedTopics`, and `LearningPath` (prev/next lesson nav with progress dots)
 - Progress tracking: `useProgress` hook (localStorage-backed) plus `MarkCompleteButton` on every lesson and `ProgressSummary` on the topics index

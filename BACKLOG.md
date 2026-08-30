@@ -14,6 +14,16 @@ All six lessons shipped: Number Systems, How a Computer Works, Input & Output De
 - [ ] Search across topics
 - [ ] Dedicated glossary page indexing all `GlossaryTerm` definitions used across topics (terms themselves already ship inline, e.g. "byte" in Number Systems)
 
+## Accessibility follow-ups
+
+See [ACCESSIBILITY.md](./ACCESSIBILITY.md) for full context on each.
+
+- [ ] Designed, consistent focus-visible treatment (currently browser-default)
+- [ ] Bring interactive elements up to 44×44px minimum touch target size
+- [ ] Add a skip-to-content link
+- [ ] Run a formal contrast audit on dark-mode token pairs
+- [ ] Add `axe-core` (or similar) automated accessibility checks to the test suite
+
 ## v3 — programming intro track
 
 - [ ] New topic group: variables, loops, conditionals, algorithms (deferred from v1 scope per project decision)
