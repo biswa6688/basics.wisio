@@ -6,10 +6,17 @@ import { MemoryHierarchy } from '../../components/illustrations/MemoryHierarchy'
 import { DidYouKnow } from '../../components/education/DidYouKnow'
 import { Comparison } from '../../components/education/Comparison'
 import { KeyTakeaways } from '../../components/education/KeyTakeaways'
+import { DefinitionCard } from '../../components/education/DefinitionCard'
 
 export default function HowComputersWork() {
   return (
     <>
+      <DefinitionCard
+        term="Computer"
+        definition="An electronic device that takes in input, follows a set of instructions to process it, and produces output — the same three-step pattern whether it's adding two numbers or rendering a video."
+        tag="Core concept"
+      />
+
       <Section title="The three core parts">
         <div className="grid gap-4 sm:grid-cols-3">
           <InfoCard icon={<CpuIcon className="h-4 w-4" strokeWidth={1.75} />} title="CPU" accent="#16a34a">

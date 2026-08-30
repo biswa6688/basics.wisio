@@ -1,4 +1,4 @@
-import { Camera, HardDrive, Keyboard, Mic, Monitor, Mouse, Printer, Smartphone, Volume2, type LucideIcon } from 'lucide-react'
+import { Camera, HardDrive, Keyboard, Mic, Monitor, Mouse, PencilRuler, Printer, ScanLine, Smartphone, Volume2, type LucideIcon } from 'lucide-react'
 
 interface Device {
   icon: LucideIcon
@@ -15,6 +15,7 @@ const GROUPS: { title: string; color: string; devices: Device[] }[] = [
       { icon: Mouse, name: 'Mouse', note: 'Pointing and clicking' },
       { icon: Camera, name: 'Camera', note: 'Images and video' },
       { icon: Mic, name: 'Microphone', note: 'Sound and voice' },
+      { icon: ScanLine, name: 'Scanner', note: 'Digitizes paper documents and images' },
     ],
   },
   {
@@ -24,6 +25,7 @@ const GROUPS: { title: string; color: string; devices: Device[] }[] = [
       { icon: Monitor, name: 'Monitor', note: 'Visual display' },
       { icon: Volume2, name: 'Speakers', note: 'Audio playback' },
       { icon: Printer, name: 'Printer', note: 'Paper output' },
+      { icon: PencilRuler, name: 'Plotter', note: 'Draws precise line-based diagrams and drawings' },
     ],
   },
   {
