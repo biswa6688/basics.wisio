@@ -1,6 +1,7 @@
 import type { ComponentType } from 'react'
 import NumberSystems from './number-systems'
 import HowComputersWork from './how-computers-work'
+import InputOutput from './input-output'
 
 /**
  * Maps a topic slug to its page component. Populated incrementally —
@@ -10,4 +11,5 @@ import HowComputersWork from './how-computers-work'
 export const topicPages: Record<string, ComponentType> = {
   'number-systems': NumberSystems,
   'how-computers-work': HowComputersWork,
+  'input-output': InputOutput,
 }

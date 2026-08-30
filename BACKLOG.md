@@ -4,7 +4,6 @@ Not scheduled yet, or planned beyond the current milestone. Ordered roughly by p
 
 ## v1 — core topic content (in progress)
 
-- [ ] Input & Output Devices lesson — device gallery grouped by input/output/both
 - [ ] Operating Systems lesson — process/memory/file manager layers diagram
 - [ ] Networking Basics lesson — device-to-device hop diagram, IP/MAC explainer
 - [ ] Internet Basics lesson — "click to page load" journey (DNS → request → response → render)

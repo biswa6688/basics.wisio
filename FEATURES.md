@@ -20,7 +20,7 @@ Status snapshot of what exists in the app today. Updated in the same commit as a
 |---|---|---|
 | Number Systems | `number-systems` | Shipped |
 | How a Computer Works | `how-computers-work` | Shipped |
-| Input & Output Devices | `input-output` | Not started |
+| Input & Output Devices | `input-output` | Shipped |
 | Operating Systems | `operating-systems` | Not started |
 | Networking Basics | `networking-basics` | Not started |
 | Internet Basics | `internet-basics` | Not started |
@@ -38,3 +38,9 @@ Key files: `src/pages/topics/number-systems.tsx`, `src/components/illustrations/
 CPU/memory/storage overview cards, an animated fetch-decode-execute cycle diagram, and a memory hierarchy pyramid (registers → cache → RAM → storage) illustrating the speed/size trade-off.
 
 Key files: `src/pages/topics/how-computers-work.tsx`, `src/components/illustrations/CpuCycle.tsx`, `src/components/illustrations/MemoryHierarchy.tsx`
+
+### Input & Output Devices (`input-output`)
+
+Animated Input → Process → Output flow diagram and a grouped device gallery (input / output / both).
+
+Key files: `src/pages/topics/input-output.tsx`, `src/components/illustrations/IoFlow.tsx`, `src/components/illustrations/DeviceGallery.tsx`
