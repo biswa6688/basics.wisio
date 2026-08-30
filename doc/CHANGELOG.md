@@ -6,6 +6,7 @@ All notable changes to this project. Format loosely follows [Keep a Changelog](h
 
 ### Added
 
+- `CpuCycle` (How a Computer Works) regenerated via the `infographic-creator` skill and hand-adapted (font stripped to Inter, neutral colors remapped to theme tokens, darkest accent quadrant lightened for dark-mode contrast) — first real application of the authoring-time diagram policy; no runtime dependency added
 - Content merge from an external "Computer Fundamentals" reference document (English content only, rewritten in Wisio's own voice — not copied verbatim): a Hardware-vs-Software distinction and a Benefits/Limitations comparison in How a Computer Works, and a concrete Input-Process-Output example in Input & Output Devices
 - Full documentation set: `DESIGN_SYSTEM.md`, `CONTENT_GUIDELINES.md`, `ILLUSTRATION_GUIDELINES.md`, `ACCESSIBILITY.md`, `PERFORMANCE.md`, `TESTING.md`, `SECURITY.md`, `SEO.md`, `CONTRIBUTING.md`, and an ADR log (`DECISIONS/ADR-0001` through `ADR-0003`) covering the SPA-over-SSR, icon-system, and progress-tracking decisions
 - Test suite: Vitest + React Testing Library, covering `ThemeProvider`/`ThemeToggle` persistence and DOM effects, `useProgress`, `useDocumentTitle`, `BitGrid` bit-math correctness, and `MultipleChoice` interaction (15 tests). `npm test` / `npm run test:watch`.

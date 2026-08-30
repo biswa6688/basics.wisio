@@ -6,7 +6,7 @@ Wisio has **two distinct illustration styles for two distinct jobs**. Don't mix 
 
 Every illustration in `src/components/illustrations/` follows this style:
 
-- **Outlined, not filled.** Shapes are `var(--color-surface)` fill with a colored stroke (the accent), not solid-saturated color blocks. See `CpuCycle.tsx`, `NetworkMap.tsx`, `MemoryHierarchy.tsx` for the pattern.
+- **Outlined, not filled.** Shapes are `var(--color-surface)` fill with a colored stroke (the accent), not solid-saturated color blocks. See `NetworkMap.tsx`, `MemoryHierarchy.tsx` for the pattern (`CpuCycle.tsx` is generated — see the authoring workflow below — and follows a related but not identical fill style).
 - **Technical, diagrammatic composition.** Boxes, connecting lines, monospace labels for technical terms (register names, memory tiers, protocol stages) — it should read like a whiteboard/spec diagram, not a poster.
 - **Accent tints via `color-mix`**, never a raw saturated fill: `color-mix(in srgb, ${accent} 14%, transparent)` for badge/icon backgrounds.
 - **Theme-aware by construction.** Colors reference `var(--color-*)` tokens or are passed as props, so the same component repaints correctly in light and dark mode — never a baked-in light-only palette.
@@ -23,7 +23,7 @@ This is an **authoring-time tool, not a runtime dependency** — `@antv/infograp
 
 **"Adapt" is real work, not a rubber-stamp — checklist, confirmed against an actual export:**
 
-1. **Strip the embedded font.** Exports embed `Alibaba PuHuiTi` as base64 — in one real export this was 85KB of a 97KB file (87%). Delete the embedded font data and change every `font-family` to `Inter, ui-sans-serif, system-ui, sans-serif` to match [DESIGN_SYSTEM.md](./DESIGN_SYSTEM.md).
+1. **Strip the embedded font.** Exports embed `Alibaba PuHuiTi` as base64 — in one real export this was 85KB of a 97KB file (87%). Delete the embedded font data and change every `font-family` to `Inter, ui-sans-serif, system-ui, sans-serif` to match [DESIGN_SYSTEM.md](./DESIGN_SYSTEM.md). **Caution**: `foreignObject` text boxes are pre-sized to fit the *original* font's measured character widths — swapping fonts after export can make text wider than its box, causing it to wrap and overflow into whatever sits below (this happened on the first real swap, `CpuCycle`'s title). Either widen the affected box and force `white-space: nowrap`, or better, set the font at generation time via the DSL's `theme.base.text.font-family` so the box is sized correctly from the start.
 2. **Remap colors to their correct role.** A raw export bakes in literal hex everywhere. Colors that are intentionally brand-accent (matching this app's existing pattern of literal accent hex, e.g. `stroke="#16a34a"`) can stay literal. Colors standing in for neutral text/surface (anything that should read as "page text," not "accent") must become the matching `var(--color-*)` token instead, or the diagram won't repaint in dark mode.
 3. **Manually verify dark-mode contrast on every accent shade used**, especially darker ones (e.g. `#0c6e31`). A static export has no dark-mode variant of its own — if a shade reads fine on white but not on `var(--color-bg)` in dark mode, either lighten it or make it conditional (pass as a prop like existing illustrations do), don't ship it as-is.
 4. **Confirm there's no baked-in background rect** — exports observed so far are transparent, keep it that way so the diagram sits correctly on both `--color-bg` and `--color-bg-subtle`.

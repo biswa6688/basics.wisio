@@ -1,66 +1,24 @@
-import { motion } from 'framer-motion'
+/**
+ * Generated via the infographic-creator skill (@antv/infographic DSL,
+ * sequence-circular-simple template), then hand-adapted per the
+ * authoring-time checklist in doc/ILLUSTRATION_GUIDELINES.md:
+ * embedded font stripped in favor of Inter, neutral text colors
+ * remapped to --color-text/--color-text-muted for dark-mode
+ * reactivity, and the darkest accent quadrant lightened for
+ * dark-background contrast. No runtime dependency on
+ * @antv/infographic — this is a static, pre-generated SVG string.
+ */
 
-const STAGES = [
-  { label: 'Fetch', detail: 'Get the next instruction from memory', angle: -90 },
-  { label: 'Decode', detail: 'Figure out what the instruction means', angle: 0 },
-  { label: 'Execute', detail: 'Perform the operation (add, compare, move…)', angle: 90 },
-  { label: 'Store', detail: 'Write the result back to a register or memory', angle: 180 },
-]
-
-const RADIUS = 120
-const CENTER = 150
-
-function pointOn(angleDeg: number) {
-  const rad = (angleDeg * Math.PI) / 180
-  return { x: CENTER + RADIUS * Math.cos(rad), y: CENTER + RADIUS * Math.sin(rad) }
-}
+const SVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="12.280074310302737 -37.61722183227539 795.4398437499999 596.2344360351562" font-family="Inter, ui-sans-serif, system-ui, sans-serif" width="100%" height="100%"><defs id="infographic-defs"><symbol xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" id="rsc-849547311"><path d="M13.5 17H4a4 4 0 0 0 2-3v-3a7 7 0 0 1 4-6 2 2 0 1 1 4 0 7 7 0 0 1 4 6v1M9 17v1a3 3 0 0 0 4.368 2.67M19 16l-2 3h4l-2 3"/></symbol><symbol xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" id="rsc-1839729532"><path d="M19 18a3.5 3.5 0 0 0 0-7h-1A5 4.5 0 0 0 7 9a4.6 4.4 0 0 0-2.1 8.4M12 13v9M9 19l3 3 3-3"/></symbol><symbol xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" id="rsc-892726920"><path d="m5 7 5 5-5 5M12 19h7"/></symbol><symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" id="rsc-375497543"><path d="M893.3 293.3 730.7 130.7c-7.5-7.5-16.7-13-26.7-16V112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V338.5c0-17-6.7-33.2-18.7-45.2M384 184h256v104H384zm456 656H184V184h136v136c0 17.7 14.3 32 32 32h320c17.7 0 32-14.3 32-32V205.8l136 136zM512 442c-79.5 0-144 64.5-144 144s64.5 144 144 144 144-64.5 144-144-64.5-144-144-144m0 224c-44.2 0-80-35.8-80-80s35.8-80 80-80 80 35.8 80 80-35.8 80-80 80"/></symbol></defs><g id="infographic-container" transform="translate(0, -17.74273990371367)"><g transform="translate(279.4312156329172, 0)"><g transform="translate(-18, 0)"><foreignObject overflow="visible" x="0" y="-0.0000045216779653856065" width="260" height="45.07492219769381"><span xmlns="http://www.w3.org/1999/xhtml" style="overflow: visible; color: var(--color-text); font-size: 24px; line-height: 1.4; width: 100%; height: 100%; display: flex; flex-wrap: nowrap; white-space: nowrap; text-align: center; justify-content: center; align-items: flex-start;">CPU Cycle</span></foreignObject></g><g transform="translate(0, 43)"><foreignObject overflow="visible" x="0.000007249899226735579" y="0.0000015383726577056223" width="224.00000800888984" height="29.166127237968222"><span xmlns="http://www.w3.org/1999/xhtml" style="overflow: visible; color: var(--color-text-muted); font-size: 16px; line-height: 1.4; width: 100%; height: 100%; display: flex; flex-wrap: wrap; word-break: break-word; white-space: pre-wrap; text-align: center; place-content: flex-start center; align-items: flex-start;">Fetch, decode, execute, store</span></foreignObject></g></g><g transform="translate(0, 178.74273990371367)"><g><path d="M 410 60 L 409.99999999999994 0 A 180 180 0 0 1 589.3150456565143 164.3119663054215 L 529.5433637710095 169.541310870281 A 120 120 0 0 0 410 60 Z" fill="#16a34a40"/><path d="M 415.03865610751575 54.10078656071677 L 416.95814414847416 6.13918144098983 A 174 174 0 0 1 582.5927834329714 157.91536491450552 L 534.9809811066344 164.00767804153847 A 126 126 0 0 0 415.03865610751575 54.10078656071677 Z" fill="#16a34a"/><path d="M 530 179.99999999999997 L 590 179.99999999999994 A 180 180 0 0 1 425.6880336945787 359.31504565651414 L 420.4586891297191 299.54336377100947 A 120 120 0 0 0 530 179.99999999999997 Z" fill="#0f8a3d40"/><path d="M 535.8992134392832 185.03865610751578 L 583.8608185590101 186.95814414847416 A 174 174 0 0 1 432.0846350854945 352.5927834329714 L 425.9923219584615 304.98098110663443 A 126 126 0 0 0 535.8992134392832 185.03865610751578 Z" fill="#0f8a3d"/><path d="M 410.00000000000006 300 L 410.00000000000006 360 A 180 180 0 0 1 230.6849543434858 195.6880336945785 L 290.45663622899053 190.458689129719 A 120 120 0 0 0 410.00000000000006 300 Z" fill="#34d17a40"/><path d="M 404.96134389248414 305.89921343928324 L 403.0418558515257 353.86081855901017 A 174 174 0 0 1 237.4072165670287 202.08463508549482 L 285.0190188933656 195.99232195846176 A 126 126 0 0 0 404.96134389248414 305.89921343928324 Z" fill="#34d17a"/><path d="M 290 180.00000000000006 L 230 180.00000000000006 A 180 180 0 0 1 394.3119663054215 0.6849543434857992 L 399.541310870281 60.45663622899053 A 120 120 0 0 0 290 180.00000000000006 Z" fill="#6ee7a340"/><path d="M 284.10078656071676 174.96134389248402 L 236.13918144098983 173.04185585152555 A 174 174 0 0 1 387.9153649145052 7.407216567028712 L 394.0076780415382 55.01901889336561 A 126 126 0 0 0 284.10078656071676 174.96134389248402 Z" fill="#6ee7a3"/></g><g><ellipse fill="#ffffff" cx="511.33853114234904" cy="69.40839947848137" rx="38" ry="38"/><ellipse fill="#16a34a" cx="511.33853114234904" cy="69.40839947848137" rx="34" ry="34"/><use x="493.33853114234904" y="51.40839947848137" width="36" height="36" fill="#fff" href="#rsc-1839729532"/><ellipse fill="#ffffff" cx="520.5916005215187" cy="281.33853114234904" rx="38" ry="38"/><ellipse fill="#0f8a3d" cx="520.5916005215187" cy="281.33853114234904" rx="34" ry="34"/><use x="502.59160052151867" y="263.33853114234904" width="36" height="36" fill="#fff" href="#rsc-892726920"/><ellipse fill="#ffffff" cx="308.661468857651" cy="290.5916005215186" rx="38" ry="38"/><ellipse fill="#34d17a" cx="308.661468857651" cy="290.5916005215186" rx="34" ry="34"/><use x="290.661468857651" y="272.5916005215186" width="36" height="36" fill="#fff" href="#rsc-849547311"/><ellipse fill="#ffffff" cx="299.40839947848133" cy="78.661468857651" rx="38" ry="38"/><ellipse fill="#6ee7a3" cx="299.40839947848133" cy="78.661468857651" rx="34" ry="34"/><use x="281.40839947848133" y="60.661468857651" width="36" height="36" fill="#fff" href="#rsc-375497543"/></g><g><g transform="translate(573.84616845547, -17.74273990371367)"><foreignObject overflow="visible" x="0" y="-3.57166095876741" width="200" height="33.14332576285386"><span xmlns="http://www.w3.org/1999/xhtml" style="overflow: visible; color: #16a34a; font-weight: bold; font-size: 18px; line-height: 1.4; width: 100%; height: 100%; display: flex; text-align: left; align-items: center;">Fetch</span></foreignObject><foreignObject overflow="visible" x="0" y="26.43" width="200" height="51.7"><span xmlns="http://www.w3.org/1999/xhtml" style="overflow: visible; color: var(--color-text-muted); font-size: 14px; line-height: 1.4; width: 100%; height: 100%; display: flex; text-align: left; align-items: flex-start;">Get the next instruction from memory</span></foreignObject></g><g transform="translate(582.8624312658344, 292.1261146217685)"><foreignObject overflow="visible" x="0" y="-3.57" width="200" height="33.14"><span xmlns="http://www.w3.org/1999/xhtml" style="overflow: visible; color: #0f8a3d; font-weight: bold; font-size: 18px; line-height: 1.4; width: 100%; height: 100%; display: flex; text-align: left; align-items: center;">Decode</span></foreignObject><foreignObject overflow="visible" x="0" y="26.43" width="200" height="51.7"><span xmlns="http://www.w3.org/1999/xhtml" style="overflow: visible; color: var(--color-text-muted); font-size: 14px; line-height: 1.4; width: 100%; height: 100%; display: flex; text-align: left; align-items: flex-start;">Figure out what the instruction means</span></foreignObject></g><g transform="translate(46.15383154453002, 307.7427399037135)"><foreignObject overflow="visible" x="0" y="-3.57" width="200" height="33.14"><span xmlns="http://www.w3.org/1999/xhtml" style="overflow: visible; color: #34d17a; font-weight: bold; font-size: 18px; line-height: 1.4; width: 100%; height: 100%; display: flex; text-align: right; justify-content: flex-end; align-items: center;">Execute</span></foreignObject><foreignObject overflow="visible" x="0" y="26.43" width="200" height="26.5"><span xmlns="http://www.w3.org/1999/xhtml" style="overflow: visible; color: var(--color-text-muted); font-size: 14px; line-height: 1.4; width: 100%; height: 100%; display: flex; text-align: right; justify-content: flex-end; align-items: flex-start;">Perform the operation</span></foreignObject></g><g transform="translate(37.137568734165484, -2.1261146217684086)"><foreignObject overflow="visible" x="0" y="-3.57" width="200" height="33.14"><span xmlns="http://www.w3.org/1999/xhtml" style="overflow: visible; color: #6ee7a3; font-weight: bold; font-size: 18px; line-height: 1.4; width: 100%; height: 100%; display: flex; text-align: right; justify-content: flex-end; align-items: center;">Store</span></foreignObject><foreignObject overflow="visible" x="0" y="26.43" width="200" height="51.7"><span xmlns="http://www.w3.org/1999/xhtml" style="overflow: visible; color: var(--color-text-muted); font-size: 14px; line-height: 1.4; width: 100%; height: 100%; display: flex; text-align: right; justify-content: flex-end; align-items: flex-start;">Write the result back to memory</span></foreignObject></g></g></g></g></svg>`
 
 export function CpuCycle() {
   return (
-    <div className="flex flex-col items-center gap-6">
-      <svg viewBox="0 0 300 300" className="h-72 w-72">
-        <circle cx={CENTER} cy={CENTER} r={RADIUS} fill="none" stroke="var(--color-border)" strokeWidth="1.5" strokeDasharray="5 5" />
-        <rect x={CENTER - 32} y={CENTER - 24} width="64" height="48" rx="8" fill="var(--color-surface)" stroke="#16a34a" strokeWidth="1.5" />
-        <text x={CENTER} y={CENTER + 5} textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--color-text)" fontFamily="monospace">
-          CPU
-        </text>
-
-        {STAGES.map((stage, index) => {
-          const point = pointOn(stage.angle)
-          return (
-            <g key={stage.label}>
-              <motion.circle
-                cx={point.x}
-                cy={point.y}
-                r="24"
-                fill="var(--color-surface)"
-                stroke="#16a34a"
-                strokeWidth="1.5"
-                initial={{ opacity: 0.75 }}
-                animate={{ opacity: [0.6, 1, 0.6] }}
-                transition={{ duration: 2.2, repeat: Infinity, delay: index * 0.4, ease: 'easeInOut' }}
-              />
-              <text x={point.x} y={point.y + 4} textAnchor="middle" fontSize="10.5" fontWeight="600" fill="var(--color-text)">
-                {stage.label}
-              </text>
-            </g>
-          )
-        })}
-      </svg>
-
-      <div className="grid gap-3 sm:grid-cols-2">
-        {STAGES.map((stage, index) => (
-          <div key={stage.label} className="flex items-start gap-2.5 rounded-lg border border-border bg-surface p-3">
-            <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-md bg-primary-100 text-[11px] font-bold text-primary-700 dark:bg-primary-950 dark:text-primary-300">
-              {index + 1}
-            </span>
-            <div>
-              <div className="text-sm font-semibold text-text">{stage.label}</div>
-              <div className="text-xs text-text-muted">{stage.detail}</div>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
+    <div
+      role="img"
+      aria-label="The CPU cycle: fetch, decode, execute, store — repeating for every instruction"
+      className="mx-auto max-w-md"
+      // eslint-disable-next-line react/no-danger
+      dangerouslySetInnerHTML={{ __html: SVG }}
+    />
   )
 }
