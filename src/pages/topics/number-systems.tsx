@@ -4,6 +4,10 @@ import { InfoCard } from '../../components/content/InfoCard'
 import { StepFlow } from '../../components/content/StepFlow'
 import { BitGrid } from '../../components/illustrations/BitGrid'
 import { BaseCompare } from '../../components/illustrations/BaseCompare'
+import { GlossaryTerm } from '../../components/education/GlossaryTerm'
+import { KeyTakeaways } from '../../components/education/KeyTakeaways'
+import { Quiz } from '../../components/education/Quiz'
+import { MultipleChoice } from '../../components/education/MultipleChoice'
 
 const steps = [
   { label: 'You type', detail: 'A key press sends an electrical signal into the machine.' },
@@ -34,8 +38,9 @@ export default function NumberSystems() {
 
       <Section title="Build a byte">
         <p className="mb-5 text-sm text-text-muted">
-          A byte is 8 bits. Each position is worth double the one to its right — 128, 64, 32, 16, 8, 4, 2, 1.
-          Add up the "on" positions to get the decimal value. Here's the byte for <strong className="text-text">202</strong>:
+          A <GlossaryTerm term="byte" definition="A group of 8 bits, the smallest unit of memory a computer typically addresses." /> is
+          8 bits. Each position is worth double the one to its right — 128, 64, 32, 16, 8, 4, 2, 1. Add up the
+          "on" positions to get the decimal value. Here's the byte for <strong className="text-text">202</strong>:
         </p>
         <div className="rounded-xl border border-border bg-bg-subtle p-6">
           <BitGrid value={202} />
@@ -49,6 +54,25 @@ export default function NumberSystems() {
         </p>
         <BaseCompare value={202} />
       </Section>
+
+      <Section title="Quick check">
+        <Quiz>
+          <MultipleChoice
+            question="How many distinct values can one byte (8 bits) represent?"
+            options={['8', '16', '256', '1024']}
+            correctIndex={2}
+            explanation="Each bit doubles the possibilities: 2^8 = 256 distinct values, from 0 to 255."
+          />
+        </Quiz>
+      </Section>
+
+      <KeyTakeaways
+        items={[
+          'Computers use binary because a transistor is a reliable two-state (on/off) switch.',
+          'A byte is 8 bits and can represent 256 distinct values (0–255).',
+          'Binary, decimal, and hexadecimal are different bases for writing the same number.',
+        ]}
+      />
     </>
   )
 }

@@ -8,11 +8,11 @@ All six lessons shipped: Number Systems, How a Computer Works, Input & Output De
 
 ## v2 — depth & interactivity
 
+- [x] Quiz/checkpoint at the end of each topic — shipped via `Quiz`/`MultipleChoice`/`TrueFalse`
+- [x] Progress tracking (localStorage) — mark topics as read/complete, shown on TopicsIndex — shipped via `useProgress`/`ProgressTracker`
 - [ ] Interactive binary-to-decimal converter widget (type a number, see it convert live)
-- [ ] Quiz/checkpoint at the end of each topic
-- [ ] Progress tracking (localStorage) — mark topics as read/complete, show on TopicsIndex
 - [ ] Search across topics
-- [ ] Glossary page for cross-topic terms (bit, byte, packet, kernel, etc.)
+- [ ] Dedicated glossary page indexing all `GlossaryTerm` definitions used across topics (terms themselves already ship inline, e.g. "byte" in Number Systems)
 
 ## v3 — programming intro track
 

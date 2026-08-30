@@ -4,12 +4,12 @@ All notable changes to this project. Format loosely follows [Keep a Changelog](h
 
 ## [Unreleased]
 
-### Changed
-
-- Complete visual redesign from a "childish" first pass to a professional/educational register: replaced all emoji UI icons with `lucide-react` line icons, replaced solid pastel-fill illustration blocks with outlined/tinted diagram style, tightened border-radius across cards/buttons/badges, replaced pill-shaped nav/CTA with underline nav + flat buttons, and loaded real Inter typography. Owl mascot logo kept unchanged by explicit user decision.
-
 ### Added
 
+- Educational component system: `DidYouKnow`, `ImportantNote`, `Warning`, `RealWorldExample` (shared `Callout` base), `KeyTakeaways`, `DefinitionCard`, `Comparison`, `Timeline`, `AnatomyDiagram`, `GlossaryTerm`, a quiz kit (`MultipleChoice`, `TrueFalse`, `Quiz`, `AnswerReveal`), `FlashCard`, `RelatedTopics`, and `LearningPath` (prev/next lesson nav with progress dots)
+- Progress tracking: `useProgress` hook (localStorage-backed) plus `MarkCompleteButton` on every lesson and `ProgressSummary` on the topics index
+- Every lesson now ends with a mark-complete control, related-topics suggestions, and prev/next navigation (via `TopicLayout`)
+- Each of the 6 lessons gained at least one new visual/interactive element built from the above: glossary terms, quiz questions, flashcards, an SSD-vs-HDD comparison, a URL anatomy breakdown, and a brief internet history timeline
 - Reduced-motion support: all Framer Motion illustrations respect `prefers-reduced-motion` via app-wide `MotionConfig`
 - Per-page document titles (`useDocumentTitle` hook) for home, topics index, and each lesson
 - Internet Basics lesson: animated click-to-page-load request journey, step-by-step breakdown, domain/DNS/HTTP explainer — completes the v1 core-basics topic set
@@ -28,3 +28,7 @@ All notable changes to this project. Format loosely follows [Keep a Changelog](h
 - Reusable content components: `TopicLayout`, `Section`, `InfoCard`, `StepFlow`, `TopicCard`
 - Topic metadata for all 6 v1 topics: Number Systems, How a Computer Works, Input & Output Devices, Operating Systems, Networking Basics, Internet Basics
 - Project documentation: README, ARCHITECTURE, FEATURES, BACKLOG, TASKS, CLAUDE, AGENTS, DEPLOYMENT, MEMORY, CHANGELOG
+
+### Changed
+
+- Complete visual redesign from a "childish" first pass to a professional/educational register: replaced all emoji UI icons with `lucide-react` line icons, replaced solid pastel-fill illustration blocks with outlined/tinted diagram style, tightened border-radius across cards/buttons/badges, replaced pill-shaped nav/CTA with underline nav + flat buttons, and loaded real Inter typography. Owl mascot logo kept unchanged by explicit user decision.

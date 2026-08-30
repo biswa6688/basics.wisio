@@ -3,6 +3,9 @@ import { Section } from '../../components/content/TopicLayout'
 import { InfoCard } from '../../components/content/InfoCard'
 import { CpuCycle } from '../../components/illustrations/CpuCycle'
 import { MemoryHierarchy } from '../../components/illustrations/MemoryHierarchy'
+import { DidYouKnow } from '../../components/education/DidYouKnow'
+import { Comparison } from '../../components/education/Comparison'
+import { KeyTakeaways } from '../../components/education/KeyTakeaways'
 
 export default function HowComputersWork() {
   return (
@@ -27,6 +30,12 @@ export default function HowComputersWork() {
           rendering this very page.
         </p>
         <CpuCycle />
+        <div className="mt-5">
+          <DidYouKnow>
+            A modern CPU can execute several billion of these fetch-decode-execute cycles every second —
+            that's why even complex programs feel instant.
+          </DidYouKnow>
+        </div>
       </Section>
 
       <Section title="Why some memory is faster than others">
@@ -36,6 +45,46 @@ export default function HowComputersWork() {
         </p>
         <MemoryHierarchy />
       </Section>
+
+      <Section title="SSD vs HDD">
+        <p className="mb-5 text-sm text-text-muted">
+          Both are long-term storage, but they work very differently — which is why swapping an HDD for an
+          SSD is one of the biggest speed upgrades an older computer can get.
+        </p>
+        <Comparison
+          sides={[
+            {
+              label: 'HDD (Hard Disk Drive)',
+              accent: '#0c6e31',
+              points: [
+                'Spinning magnetic disks read by a moving arm',
+                'Cheaper per gigabyte',
+                'Slower — mechanical parts take time to move',
+                'More vulnerable to physical shock',
+              ],
+            },
+            {
+              label: 'SSD (Solid State Drive)',
+              accent: '#16a34a',
+              points: [
+                'Flash memory chips, no moving parts',
+                'More expensive per gigabyte',
+                'Much faster read/write speeds',
+                'More durable — nothing to physically break',
+              ],
+            },
+          ]}
+        />
+      </Section>
+
+      <KeyTakeaways
+        items={[
+          'The CPU, memory, and storage form the core loop every program runs on.',
+          'Fetch-decode-execute repeats billions of times per second.',
+          'Faster memory is more expensive and holds less — hence the speed/size hierarchy.',
+          'SSDs beat HDDs on speed and durability by having no moving parts.',
+        ]}
+      />
     </>
   )
 }

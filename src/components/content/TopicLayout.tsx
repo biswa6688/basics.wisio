@@ -3,6 +3,9 @@ import { ArrowLeft } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import type { Topic } from '../../data/topics'
 import { topicIcons } from '../../data/topicIcons'
+import { MarkCompleteButton } from '../education/ProgressTracker'
+import { LearningPath } from '../education/LearningPath'
+import { RelatedTopics } from '../education/RelatedTopics'
 
 export function TopicLayout({ topic, children }: { topic: Topic; children: ReactNode }) {
   const Icon = topicIcons[topic.slug]
@@ -30,6 +33,12 @@ export function TopicLayout({ topic, children }: { topic: Topic; children: React
         <p className="mt-3 max-w-2xl text-text-muted">{topic.description}</p>
       </div>
       <div className="flex flex-col gap-12">{children}</div>
+
+      <div className="mt-14 flex flex-col gap-12 border-t border-border pt-10">
+        <MarkCompleteButton slug={topic.slug} />
+        <RelatedTopics currentSlug={topic.slug} />
+        <LearningPath currentSlug={topic.slug} />
+      </div>
     </div>
   )
 }

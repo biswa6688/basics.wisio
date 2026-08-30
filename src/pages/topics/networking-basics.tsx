@@ -2,6 +2,9 @@ import { Fingerprint, PackageCheck, Route, Router } from 'lucide-react'
 import { Section } from '../../components/content/TopicLayout'
 import { InfoCard } from '../../components/content/InfoCard'
 import { NetworkMap } from '../../components/illustrations/NetworkMap'
+import { Quiz } from '../../components/education/Quiz'
+import { MultipleChoice } from '../../components/education/MultipleChoice'
+import { KeyTakeaways } from '../../components/education/KeyTakeaways'
 
 export default function NetworkingBasics() {
   return (
@@ -43,6 +46,25 @@ export default function NetworkingBasics() {
           </InfoCard>
         </div>
       </Section>
+
+      <Section title="Quick check">
+        <Quiz>
+          <MultipleChoice
+            question="Which address is permanent and burned into the network hardware itself?"
+            options={['IP address', 'MAC address', 'Domain name', 'Port number']}
+            correctIndex={1}
+            explanation="A MAC address is assigned to the hardware at manufacture and doesn't change; an IP address is assigned by the network and can."
+          />
+        </Quiz>
+      </Section>
+
+      <KeyTakeaways
+        items={[
+          'Every networked device needs an address so data knows where to go.',
+          'IP addresses are logical and can change; MAC addresses are physical and permanent.',
+          'Large messages are split into packets that can travel independently and get reassembled on arrival.',
+        ]}
+      />
     </>
   )
 }

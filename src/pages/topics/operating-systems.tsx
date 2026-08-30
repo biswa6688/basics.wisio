@@ -3,6 +3,9 @@ import { Section } from '../../components/content/TopicLayout'
 import { InfoCard } from '../../components/content/InfoCard'
 import { OsLayers } from '../../components/illustrations/OsLayers'
 import { ProcessTimeline } from '../../components/illustrations/ProcessTimeline'
+import { ImportantNote } from '../../components/education/ImportantNote'
+import { FlashCard } from '../../components/education/FlashCard'
+import { KeyTakeaways } from '../../components/education/KeyTakeaways'
 
 export default function OperatingSystems() {
   return (
@@ -13,6 +16,12 @@ export default function OperatingSystems() {
           the machine's limited resources safely.
         </p>
         <OsLayers />
+        <div className="mt-5">
+          <ImportantNote title="The kernel">
+            The kernel is the core of the operating system — the part with direct access to hardware. Everything
+            else, including the rest of the OS, runs on top of it.
+          </ImportantNote>
+        </div>
       </Section>
 
       <Section title="What the OS actually manages">
@@ -38,6 +47,23 @@ export default function OperatingSystems() {
         </p>
         <ProcessTimeline />
       </Section>
+
+      <Section title="Test yourself">
+        <p className="mb-4 text-sm text-text-muted">Click a card to reveal the definition.</p>
+        <div className="grid gap-4 sm:grid-cols-3">
+          <FlashCard front="Process" back="A running instance of a program, with its own memory space." />
+          <FlashCard front="Thread" back="A single sequence of execution within a process; a process can have many." />
+          <FlashCard front="Kernel" back="The core of the OS with direct hardware access." />
+        </div>
+      </Section>
+
+      <KeyTakeaways
+        items={[
+          'Apps never touch hardware directly — the OS mediates every request.',
+          'The OS manages processes, memory, and files so apps stay isolated and safe.',
+          'Fast context-switching between processes is what makes multitasking feel instant.',
+        ]}
+      />
     </>
   )
 }

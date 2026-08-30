@@ -3,6 +3,11 @@ import { Section } from '../../components/content/TopicLayout'
 import { InfoCard } from '../../components/content/InfoCard'
 import { IoFlow } from '../../components/illustrations/IoFlow'
 import { DeviceGallery } from '../../components/illustrations/DeviceGallery'
+import { DefinitionCard } from '../../components/education/DefinitionCard'
+import { RealWorldExample } from '../../components/education/RealWorldExample'
+import { Quiz } from '../../components/education/Quiz'
+import { TrueFalse } from '../../components/education/TrueFalse'
+import { KeyTakeaways } from '../../components/education/KeyTakeaways'
 
 export default function InputOutput() {
   return (
@@ -31,7 +36,39 @@ export default function InputOutput() {
 
       <Section title="Common devices, grouped">
         <DeviceGallery />
+        <div className="mt-5">
+          <DefinitionCard
+            term="Peripheral"
+            definition="Any input or output device connected to a computer that isn't part of its core processing hardware — a keyboard, mouse, monitor, or printer, for example."
+          />
+        </div>
       </Section>
+
+      <Section title="Real world">
+        <RealWorldExample>
+          A touchscreen phone is both input and output at once: your finger tap (input) is read by the same
+          panel that displays the app (output) — which is why it's grouped separately from single-direction
+          devices.
+        </RealWorldExample>
+      </Section>
+
+      <Section title="Quick check">
+        <Quiz>
+          <TrueFalse
+            statement="A monitor is an example of an input device."
+            isTrue={false}
+            explanation="A monitor only displays information from the computer — that makes it an output device, not input."
+          />
+        </Quiz>
+      </Section>
+
+      <KeyTakeaways
+        items={[
+          'Input devices translate human/physical action into signals the computer can process.',
+          'Output devices translate computed results back into something humans can perceive.',
+          'Some devices, like touchscreens, do both at once.',
+        ]}
+      />
     </>
   )
 }
