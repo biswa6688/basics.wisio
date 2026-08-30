@@ -1,3 +1,4 @@
+import { FolderTree, GitBranch, MemoryStick } from 'lucide-react'
 import { Section } from '../../components/content/TopicLayout'
 import { InfoCard } from '../../components/content/InfoCard'
 import { OsLayers } from '../../components/illustrations/OsLayers'
@@ -16,14 +17,14 @@ export default function OperatingSystems() {
 
       <Section title="What the OS actually manages">
         <div className="grid gap-4 sm:grid-cols-3">
-          <InfoCard icon="🧵" title="Processes" accent="#16a34a">
+          <InfoCard icon={<GitBranch className="h-4 w-4" strokeWidth={1.75} />} title="Processes" accent="#16a34a">
             Every running app is a process. The OS decides which one gets the CPU next, and for how long.
           </InfoCard>
-          <InfoCard icon="🗂️" title="Files" accent="#0891b2">
+          <InfoCard icon={<FolderTree className="h-4 w-4" strokeWidth={1.75} />} title="Files" accent="#0891b2">
             Organizes storage into a filesystem so apps can read/write data without knowing the physical
             layout of the disk.
           </InfoCard>
-          <InfoCard icon="🚦" title="Memory" accent="#0c6e31">
+          <InfoCard icon={<MemoryStick className="h-4 w-4" strokeWidth={1.75} />} title="Memory" accent="#0c6e31">
             Gives each process its own private slice of RAM, so one app can't accidentally read or corrupt
             another's data.
           </InfoCard>

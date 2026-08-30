@@ -13,6 +13,7 @@ Status snapshot of what exists in the app today. Updated in the same commit as a
 | Topic page shell | Per-topic header (icon, title, tagline, description) + content slot, "coming soon" fallback | `src/pages/TopicPage.tsx`, `src/components/content/TopicLayout.tsx` |
 | Content component kit | `InfoCard`, `StepFlow` reusable building blocks for lesson content | `src/components/content/` |
 | Brand | Wisio logo/favicon, tagline "Wisdom, Byte by Byte", green primary palette | `public/wisio.svg`, `src/index.css` |
+| Design system v2 | Professional/educational visual register: Lucide icons (no emoji), Inter typography, tinted-accent diagram style, tightened radii | `src/data/topicIcons.tsx`, `index.html`, all `components/illustrations/*` |
 | Reduced motion | All Framer Motion animations respect OS "reduce motion" setting app-wide | `src/main.tsx` (`MotionConfig reducedMotion="user"`) |
 | Per-page titles | Browser tab title updates per route (home / topics index / each lesson) | `src/hooks/useDocumentTitle.ts` |
 

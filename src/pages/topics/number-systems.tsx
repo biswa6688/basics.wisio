@@ -1,3 +1,4 @@
+import { Zap, Cable } from 'lucide-react'
 import { Section } from '../../components/content/TopicLayout'
 import { InfoCard } from '../../components/content/InfoCard'
 import { StepFlow } from '../../components/content/StepFlow'
@@ -16,11 +17,11 @@ export default function NumberSystems() {
     <>
       <Section title="Why computers use binary">
         <div className="grid gap-4 sm:grid-cols-2">
-          <InfoCard icon="⚡" title="It's a hardware fact" accent="#16a34a">
+          <InfoCard icon={<Zap className="h-4 w-4" strokeWidth={1.75} />} title="It's a hardware fact" accent="#16a34a">
             A transistor is easiest to build as a reliable two-state switch — on or off. Trying to reliably
             detect ten voltage levels for decimal digits would make hardware far more error-prone.
           </InfoCard>
-          <InfoCard icon="🔌" title="On / Off = 1 / 0" accent="#0891b2">
+          <InfoCard icon={<Cable className="h-4 w-4" strokeWidth={1.75} />} title="On / Off = 1 / 0" accent="#0891b2">
             Every bit is just the state of one switch. String enough switches together and you can represent
             any number, letter, image, or sound.
           </InfoCard>
@@ -36,7 +37,7 @@ export default function NumberSystems() {
           A byte is 8 bits. Each position is worth double the one to its right — 128, 64, 32, 16, 8, 4, 2, 1.
           Add up the "on" positions to get the decimal value. Here's the byte for <strong className="text-text">202</strong>:
         </p>
-        <div className="rounded-2xl border border-border bg-bg-subtle p-6">
+        <div className="rounded-xl border border-border bg-bg-subtle p-6">
           <BitGrid value={202} />
         </div>
       </Section>

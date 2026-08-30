@@ -1,32 +1,30 @@
 import { Link } from 'react-router-dom'
+import { ArrowRight } from 'lucide-react'
 import type { Topic } from '../../data/topics'
+import { topicIcons } from '../../data/topicIcons'
 
 export function TopicCard({ topic }: { topic: Topic }) {
+  const Icon = topicIcons[topic.slug]
+
   return (
     <Link
       to={`/topics/${topic.slug}`}
-      className="group relative flex flex-col gap-3 overflow-hidden rounded-2xl border border-border bg-surface p-6 transition-all hover:-translate-y-1 hover:shadow-xl hover:shadow-primary-900/5"
+      className="group flex flex-col gap-3 rounded-xl border border-border bg-surface p-6 transition-colors hover:border-primary-400/60 hover:bg-surface-raised"
     >
       <span
-        className="absolute -right-8 -top-8 h-24 w-24 rounded-full opacity-10 transition-opacity group-hover:opacity-20"
-        style={{ backgroundColor: topic.accent }}
-        aria-hidden
-      />
-      <span
-        className="inline-flex h-11 w-11 items-center justify-center rounded-xl text-lg font-bold text-white"
-        style={{ backgroundColor: topic.accent }}
-        aria-hidden
+        className="inline-flex h-10 w-10 items-center justify-center rounded-lg"
+        style={{ backgroundColor: `color-mix(in srgb, ${topic.accent} 14%, transparent)`, color: topic.accent }}
       >
-        {topic.title.charAt(0)}
+        {Icon && <Icon className="h-5 w-5" strokeWidth={1.75} aria-hidden />}
       </span>
-      <h3 className="text-lg font-bold text-text">{topic.title}</h3>
-      <p className="text-sm font-medium text-primary-600 dark:text-primary-400">{topic.tagline}</p>
-      <p className="text-sm text-text-muted">{topic.description}</p>
-      <span className="mt-auto inline-flex items-center gap-1 text-sm font-semibold text-primary-600 dark:text-primary-400">
+      <h3 className="text-base font-semibold text-text">{topic.title}</h3>
+      <p className="text-sm font-medium" style={{ color: topic.accent }}>
+        {topic.tagline}
+      </p>
+      <p className="text-sm leading-relaxed text-text-muted">{topic.description}</p>
+      <span className="mt-auto inline-flex items-center gap-1 pt-1 text-sm font-semibold text-primary-600 dark:text-primary-400">
         Explore
-        <span className="transition-transform group-hover:translate-x-1" aria-hidden>
-          →
-        </span>
+        <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" strokeWidth={2} aria-hidden />
       </span>
     </Link>
   )

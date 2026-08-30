@@ -4,6 +4,10 @@ All notable changes to this project. Format loosely follows [Keep a Changelog](h
 
 ## [Unreleased]
 
+### Changed
+
+- Complete visual redesign from a "childish" first pass to a professional/educational register: replaced all emoji UI icons with `lucide-react` line icons, replaced solid pastel-fill illustration blocks with outlined/tinted diagram style, tightened border-radius across cards/buttons/badges, replaced pill-shaped nav/CTA with underline nav + flat buttons, and loaded real Inter typography. Owl mascot logo kept unchanged by explicit user decision.
+
 ### Added
 
 - Reduced-motion support: all Framer Motion illustrations respect `prefers-reduced-motion` via app-wide `MotionConfig`

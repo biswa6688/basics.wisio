@@ -38,6 +38,15 @@ Each topic's actual lesson content lives in `src/pages/topics/<slug>.tsx` and is
 - **`components/content/`** — generic, reusable building blocks for lesson content: `TopicLayout`/`Section` (page scaffold), `InfoCard` (icon + text card), `StepFlow` (numbered animated step sequence), `TopicCard` (grid preview card). New topics should compose these before reaching for one-off markup.
 - **`components/illustrations/`** — concept-specific SVG/animated illustrations (e.g. `HeroComputer`). Each illustration is a self-contained component using inline SVG plus Framer Motion for subtle motion, styled with the theme's CSS variables so it repaints correctly in light/dark mode.
 
+## Visual language
+
+Wisio reads as a technical/educational product (Duolingo/Brilliant register), not a children's app:
+
+- **Icons**: `lucide-react` line icons only. No emoji as UI icons anywhere in the app — emoji read as informal/childish at UI scale. Per-topic icons are centralized in `src/data/topicIcons.tsx` (slug → `LucideIcon`).
+- **Color**: green is the accent, not the dominant fill. Illustrations use outlined/bordered shapes with a tinted (not solid-saturated) accent, e.g. `color-mix(in srgb, ${accent} 14%, transparent)` for icon-badge backgrounds, rather than solid pastel blocks.
+- **Radius**: `rounded-lg`/`rounded-xl` (8–12px) across cards, buttons, and badges — not `rounded-2xl`/`rounded-full`, which reads as bubbly at this scale. Pills are reserved for the theme toggle and small eyebrow badges, a standard SaaS pattern.
+- **Typography**: Inter, loaded via Google Fonts in `index.html`, at `font-bold` (700) rather than `font-extrabold` (800) for headings.
+
 ## Why these choices
 
 - **Vite** — fast dev/build for a static SPA, no need for Next.js SSR/routing since content has no auth or per-request data.

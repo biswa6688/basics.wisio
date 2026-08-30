@@ -19,9 +19,9 @@ export function CpuCycle() {
   return (
     <div className="flex flex-col items-center gap-6">
       <svg viewBox="0 0 300 300" className="h-72 w-72">
-        <circle cx={CENTER} cy={CENTER} r={RADIUS} fill="none" stroke="var(--color-border)" strokeWidth="2" strokeDasharray="6 6" />
-        <circle cx={CENTER} cy={CENTER} r="34" fill="#052816" stroke="#16a34a" strokeWidth="2" />
-        <text x={CENTER} y={CENTER + 5} textAnchor="middle" fontSize="14" fontWeight="700" fill="#a7f3c6" fontFamily="monospace">
+        <circle cx={CENTER} cy={CENTER} r={RADIUS} fill="none" stroke="var(--color-border)" strokeWidth="1.5" strokeDasharray="5 5" />
+        <rect x={CENTER - 32} y={CENTER - 24} width="64" height="48" rx="8" fill="var(--color-surface)" stroke="#16a34a" strokeWidth="1.5" />
+        <text x={CENTER} y={CENTER + 5} textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--color-text)" fontFamily="monospace">
           CPU
         </text>
 
@@ -32,13 +32,15 @@ export function CpuCycle() {
               <motion.circle
                 cx={point.x}
                 cy={point.y}
-                r="26"
-                fill="#16a34a"
-                initial={{ scale: 0.8, opacity: 0.7 }}
-                animate={{ scale: [0.9, 1.05, 0.9] }}
-                transition={{ duration: 2, repeat: Infinity, delay: index * 0.4, ease: 'easeInOut' }}
+                r="24"
+                fill="var(--color-surface)"
+                stroke="#16a34a"
+                strokeWidth="1.5"
+                initial={{ opacity: 0.75 }}
+                animate={{ opacity: [0.6, 1, 0.6] }}
+                transition={{ duration: 2.2, repeat: Infinity, delay: index * 0.4, ease: 'easeInOut' }}
               />
-              <text x={point.x} y={point.y + 4} textAnchor="middle" fontSize="11" fontWeight="700" fill="white">
+              <text x={point.x} y={point.y + 4} textAnchor="middle" fontSize="10.5" fontWeight="600" fill="var(--color-text)">
                 {stage.label}
               </text>
             </g>
@@ -48,8 +50,8 @@ export function CpuCycle() {
 
       <div className="grid gap-3 sm:grid-cols-2">
         {STAGES.map((stage, index) => (
-          <div key={stage.label} className="flex items-start gap-2.5 rounded-xl border border-border bg-surface p-3">
-            <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary-500 text-xs font-bold text-white">
+          <div key={stage.label} className="flex items-start gap-2.5 rounded-lg border border-border bg-surface p-3">
+            <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-md bg-primary-100 text-[11px] font-bold text-primary-700 dark:bg-primary-950 dark:text-primary-300">
               {index + 1}
             </span>
             <div>
