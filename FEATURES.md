@@ -19,7 +19,7 @@ Status snapshot of what exists in the app today. Updated in the same commit as a
 | Topic | Slug | Status |
 |---|---|---|
 | Number Systems | `number-systems` | Shipped |
-| How a Computer Works | `how-computers-work` | Not started |
+| How a Computer Works | `how-computers-work` | Shipped |
 | Input & Output Devices | `input-output` | Not started |
 | Operating Systems | `operating-systems` | Not started |
 | Networking Basics | `networking-basics` | Not started |
@@ -32,3 +32,9 @@ See [BACKLOG.md](./BACKLOG.md) for planned scope of each, and [TASKS.md](./TASKS
 Why binary is used in hardware, a keystroke-to-bit-pattern step flow, an interactive-looking bit grid that builds the byte for 202, and a binary/decimal/hex side-by-side comparison.
 
 Key files: `src/pages/topics/number-systems.tsx`, `src/components/illustrations/BitGrid.tsx`, `src/components/illustrations/BaseCompare.tsx`
+
+### How a Computer Works (`how-computers-work`)
+
+CPU/memory/storage overview cards, an animated fetch-decode-execute cycle diagram, and a memory hierarchy pyramid (registers → cache → RAM → storage) illustrating the speed/size trade-off.
+
+Key files: `src/pages/topics/how-computers-work.tsx`, `src/components/illustrations/CpuCycle.tsx`, `src/components/illustrations/MemoryHierarchy.tsx`
