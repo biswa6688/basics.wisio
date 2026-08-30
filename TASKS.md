@@ -19,10 +19,10 @@ Active/near-term work only. Long-range items live in [BACKLOG.md](./BACKLOG.md).
 - [x] How a Computer Works lesson content + illustrations
 - [x] Input & Output Devices lesson content + illustrations
 - [x] Operating Systems lesson content + illustrations
+- [x] Networking Basics lesson content + illustrations
 
 ## Next up (build one at a time, commit + push before starting the next)
 
-1. [ ] Networking Basics lesson content + illustrations
-2. [ ] Internet Basics lesson content + illustrations
+1. [ ] Internet Basics lesson content + illustrations
 
 Each task above updates: `FEATURES.md`, `TASKS.md` (move item to Done), `CHANGELOG.md`.

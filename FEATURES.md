@@ -22,7 +22,7 @@ Status snapshot of what exists in the app today. Updated in the same commit as a
 | How a Computer Works | `how-computers-work` | Shipped |
 | Input & Output Devices | `input-output` | Shipped |
 | Operating Systems | `operating-systems` | Shipped |
-| Networking Basics | `networking-basics` | Not started |
+| Networking Basics | `networking-basics` | Shipped |
 | Internet Basics | `internet-basics` | Not started |
 
 See [BACKLOG.md](./BACKLOG.md) for planned scope of each, and [TASKS.md](./TASKS.md) for the active work item.
@@ -50,3 +50,9 @@ Key files: `src/pages/topics/input-output.tsx`, `src/components/illustrations/Io
 App/OS/hardware layer diagram, process/file/memory management overview cards, and an animated CPU time-slicing timeline showing how multitasking feels instant on one core.
 
 Key files: `src/pages/topics/operating-systems.tsx`, `src/components/illustrations/OsLayers.tsx`, `src/components/illustrations/ProcessTimeline.tsx`
+
+### Networking Basics (`networking-basics`)
+
+Animated router/device network map, IP vs MAC address explainer, and a packet routing/reassembly overview.
+
+Key files: `src/pages/topics/networking-basics.tsx`, `src/components/illustrations/NetworkMap.tsx`
