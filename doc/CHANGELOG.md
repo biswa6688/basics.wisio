@@ -6,6 +6,7 @@ All notable changes to this project. Format loosely follows [Keep a Changelog](h
 
 ### Added
 
+- Two new topics beyond the original v1 set, sourced from the same external reference doc: **History of Computers** (early calculating machines, the five computer generations) and **Types of Computers** (analog/digital/hybrid classification, supercomputer→mainframe→mini→micro scale, applications folded in as a closing section). App is now 8 topics total.
 - `CpuCycle` (How a Computer Works) regenerated via the `infographic-creator` skill and hand-adapted (font stripped to Inter, neutral colors remapped to theme tokens, darkest accent quadrant lightened for dark-mode contrast) — first real application of the authoring-time diagram policy; no runtime dependency added
 - Content merge from an external "Computer Fundamentals" reference document (English content only, rewritten in Wisio's own voice — not copied verbatim): a plain-language computer definition and a Hardware-vs-Software distinction in How a Computer Works, a Benefits/Limitations comparison in How a Computer Works, a concrete Input-Process-Output example in Input & Output Devices, and two missing devices (Scanner, Plotter) added to the device gallery
 - Full documentation set: `DESIGN_SYSTEM.md`, `CONTENT_GUIDELINES.md`, `ILLUSTRATION_GUIDELINES.md`, `ACCESSIBILITY.md`, `PERFORMANCE.md`, `TESTING.md`, `SECURITY.md`, `SEO.md`, `CONTRIBUTING.md`, and an ADR log (`DECISIONS/ADR-0001` through `ADR-0003`) covering the SPA-over-SSR, icon-system, and progress-tracking decisions

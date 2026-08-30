@@ -1,6 +1,6 @@
 # Content Guidelines
 
-How to write and structure a Wisio lesson. Applies to the 6 existing topics and any new ones.
+How to write and structure a Wisio lesson. Applies to the 8 existing topics and any new ones.
 
 ## The core rule: visual before verbal
 

@@ -9,7 +9,7 @@ Status snapshot of what exists in the app today. Updated in the same commit as a
 | Theme system | Light / Dark / System as a 3-icon segmented control (moon/monitor/sun), persisted, no flash-of-wrong-theme on load | `src/theme/ThemeProvider.tsx`, `src/components/layout/ThemeToggle.tsx`, `index.html` |
 | App shell | Sticky navbar with brand, footer, responsive layout | `src/components/layout/` |
 | Home page | Hero with animated illustration, value props, topic preview grid | `src/pages/Home.tsx`, `src/components/illustrations/HeroComputer.tsx` |
-| Topics index | Grid of all 6 topics with accent-colored cards | `src/pages/TopicsIndex.tsx`, `src/components/content/TopicCard.tsx` |
+| Topics index | Grid of all 8 topics with accent-colored cards | `src/pages/TopicsIndex.tsx`, `src/components/content/TopicCard.tsx` |
 | Topic page shell | Per-topic header (icon, title, tagline, description) + content slot, "coming soon" fallback | `src/pages/TopicPage.tsx`, `src/components/content/TopicLayout.tsx` |
 | Content component kit | `InfoCard`, `StepFlow` reusable building blocks for lesson content | `src/components/content/` |
 | Brand | Wisio logo/favicon, tagline "Learn the Basics. Build Your Wisdom.", green primary palette | `public/wisio.svg`, `src/index.css` |
@@ -31,6 +31,8 @@ Status snapshot of what exists in the app today. Updated in the same commit as a
 | Operating Systems | `operating-systems` | Shipped |
 | Networking Basics | `networking-basics` | Shipped |
 | Internet Basics | `internet-basics` | Shipped |
+| History of Computers | `history-of-computers` | Shipped |
+| Types of Computers | `types-of-computers` | Shipped |
 
 See [BACKLOG.md](./BACKLOG.md) for planned scope of each, and [TASKS.md](./TASKS.md) for the active work item.
 
@@ -69,3 +71,15 @@ Key files: `src/pages/topics/networking-basics.tsx`, `src/components/illustratio
 Animated click-to-page-load request journey diagram, step-by-step breakdown, and domain/DNS/HTTP explainer cards. Completes the v1 core-basics topic set.
 
 Key files: `src/pages/topics/internet-basics.tsx`, `src/components/illustrations/RequestJourney.tsx`
+
+### History of Computers (`history-of-computers`)
+
+Two timelines (early calculating machines, the five computer generations), a quiz, and key takeaways. Added post-v1, sourced from an external reference doc and rewritten in Wisio's own voice.
+
+Key files: `src/pages/topics/history-of-computers.tsx` (reuses the shared `Timeline` education component, no new illustration needed)
+
+### Types of Computers (`types-of-computers`)
+
+Analog/digital/hybrid classification via `Comparison`, a supercomputer→mainframe→mini→micro size/power grid, and a real-world-applications closing section. Added post-v1, same source as History of Computers.
+
+Key files: `src/pages/topics/types-of-computers.tsx`

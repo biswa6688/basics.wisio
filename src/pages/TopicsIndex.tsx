@@ -11,7 +11,7 @@ export function TopicsIndex() {
       <div className="mb-6 max-w-2xl">
         <h1 className="text-3xl font-bold tracking-tight text-text sm:text-4xl">All topics</h1>
         <p className="mt-2 text-text-muted">
-          Six illustrated lessons covering the core ideas behind every computer — pick one and start exploring.
+          Eight illustrated lessons covering the core ideas behind every computer — pick one and start exploring.
         </p>
       </div>
       <div className="mb-10 max-w-sm">

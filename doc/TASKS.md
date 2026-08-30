@@ -21,9 +21,11 @@ Active/near-term work only. Long-range items live in [BACKLOG.md](./BACKLOG.md).
 - [x] Operating Systems lesson content + illustrations
 - [x] Networking Basics lesson content + illustrations
 - [x] Internet Basics lesson content + illustrations
+- [x] History of Computers lesson content (post-v1)
+- [x] Types of Computers lesson content (post-v1)
 
-## v1 complete
+## v1 complete, scope extended
 
-All 6 core-basics topics are shipped. See [BACKLOG.md](./BACKLOG.md) for v2/v3 scope (interactivity, progress tracking, programming-intro track) — nothing is queued in "Next up" until a v2 item is picked.
+All 6 original core-basics topics shipped, plus 2 more added afterward (History of Computers, Types of Computers) — 8 topics total. See [BACKLOG.md](./BACKLOG.md) for v2/v3 scope (interactivity, progress tracking, programming-intro track) — nothing is queued in "Next up" until a v2 item is picked.
 
 Each task above updates: `FEATURES.md`, `TASKS.md` (move item to Done), `CHANGELOG.md`.

@@ -6,6 +6,10 @@ Not scheduled yet, or planned beyond the current milestone. Ordered roughly by p
 
 All six lessons shipped: Number Systems, How a Computer Works, Input & Output Devices, Operating Systems, Networking Basics, Internet Basics. See [FEATURES.md](./FEATURES.md).
 
+## Post-v1 additions (complete)
+
+Two more topics added beyond the original v1 set, sourced from an external "Computer Fundamentals" reference doc: History of Computers, Types of Computers. App is 8 topics total. The doc's remaining Applications section was deliberately left out as a standalone topic — folded into Types of Computers as a brief closing section instead.
+
 ## v2 — depth & interactivity
 
 - [x] Quiz/checkpoint at the end of each topic — shipped via `Quiz`/`MultipleChoice`/`TrueFalse`

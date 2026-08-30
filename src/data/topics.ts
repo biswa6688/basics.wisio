@@ -55,6 +55,22 @@ export const topics: Topic[] = [
       'Walk through what really happens between typing a web address and seeing a page appear on your screen.',
     accent: '#0891b2',
   },
+  {
+    slug: 'history-of-computers',
+    title: 'History of Computers',
+    tagline: 'From beads on a wire to microchips',
+    description:
+      'Trace how calculating machines evolved from the abacus to the modern microprocessor, one breakthrough at a time.',
+    accent: '#0d9488',
+  },
+  {
+    slug: 'types-of-computers',
+    title: 'Types of Computers',
+    tagline: 'Same idea, wildly different sizes',
+    description:
+      'From room-sized supercomputers to the phone in your pocket — see how computers are classified by how they represent data and by size and power.',
+    accent: '#65a30d',
+  },
 ]
 
 export function getTopicBySlug(slug: string): Topic | undefined {

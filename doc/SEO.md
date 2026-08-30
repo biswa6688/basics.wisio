@@ -6,7 +6,7 @@ People search for "what is RAM," "what is DNS," "how does binary work," etc. —
 
 ## In place today
 
-- **Per-page `<title>`** via `useDocumentTitle` — home, topics index, and each of the 6 lessons have a distinct, descriptive title (e.g. "Number Systems — Wisio").
+- **Per-page `<title>`** via `useDocumentTitle` — home, topics index, and each of the 8 lessons have a distinct, descriptive title (e.g. "Number Systems — Wisio").
 - **Semantic heading structure**: one `<h1>` per page, `<h2>` per section — see [ACCESSIBILITY.md](./ACCESSIBILITY.md) (accessibility and SEO overlap heavily here).
 - **Descriptive link text**: nav and card links use real phrases ("Explore," topic titles), not "click here."
 - **A single global meta description** in `index.html`.

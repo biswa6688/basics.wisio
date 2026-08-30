@@ -8,7 +8,7 @@ import { useDocumentTitle } from '../hooks/useDocumentTitle'
 
 const highlights = [
   { icon: LayoutTemplate, title: 'Visual first', text: 'Every idea is shown as a diagram before it is explained in words.' },
-  { icon: Zap, title: 'Bite-sized', text: 'Six focused lessons — no fluff, just the fundamentals that matter.' },
+  { icon: Zap, title: 'Bite-sized', text: 'Eight focused lessons — no fluff, just the fundamentals that matter.' },
   { icon: MonitorCog, title: 'Any theme', text: 'Light, dark, or match your system — easy on the eyes, day or night.' },
 ]
 
