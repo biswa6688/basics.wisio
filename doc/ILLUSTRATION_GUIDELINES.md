@@ -15,6 +15,21 @@ Every illustration in `src/components/illustrations/` follows this style:
 
 This is the only style used inside lesson pages. It's what makes the app itself feel professional/technical rather than like a marketing brochure.
 
+## Authoring workflow: AI-assisted generation as the primary starting point
+
+As of 2026-08-30, when building a **new** in-lesson diagram: try generating it first with an installed infographic-generation skill (`infographic-creator`, using `@antv/infographic`'s DSL — see its `SKILL.md`), then adapt the output by hand into a static component. Hand-code from scratch only if generation doesn't produce something worth adapting (failover).
+
+This is an **authoring-time tool, not a runtime dependency** — `@antv/infographic` is never imported by the app itself. The workflow is generate → export static SVG → adapt → inline as a plain component, exactly like every hand-coded illustration today. See [MEMORY.md](./MEMORY.md) for why a *runtime* integration was tried and rejected (bundle size, no automatic theme reactivity).
+
+**"Adapt" is real work, not a rubber-stamp — checklist, confirmed against an actual export:**
+
+1. **Strip the embedded font.** Exports embed `Alibaba PuHuiTi` as base64 — in one real export this was 85KB of a 97KB file (87%). Delete the embedded font data and change every `font-family` to `Inter, ui-sans-serif, system-ui, sans-serif` to match [DESIGN_SYSTEM.md](./DESIGN_SYSTEM.md).
+2. **Remap colors to their correct role.** A raw export bakes in literal hex everywhere. Colors that are intentionally brand-accent (matching this app's existing pattern of literal accent hex, e.g. `stroke="#16a34a"`) can stay literal. Colors standing in for neutral text/surface (anything that should read as "page text," not "accent") must become the matching `var(--color-*)` token instead, or the diagram won't repaint in dark mode.
+3. **Manually verify dark-mode contrast on every accent shade used**, especially darker ones (e.g. `#0c6e31`). A static export has no dark-mode variant of its own — if a shade reads fine on white but not on `var(--color-bg)` in dark mode, either lighten it or make it conditional (pass as a prop like existing illustrations do), don't ship it as-is.
+4. **Confirm there's no baked-in background rect** — exports observed so far are transparent, keep it that way so the diagram sits correctly on both `--color-bg` and `--color-bg-subtle`.
+
+If steps 1–3 would take longer than just hand-coding the diagram (true for anything simple — a 3-4 box flow, a bit grid), skip the generator and hand-code directly; the tool earns its keep on compositions that are genuinely fiddly to lay out by hand (radial/circular arrangements, icon-heavy grids), not on everything.
+
 ## 2. Standalone marketing/summary infographics (reference style, not yet built)
 
 For any *future* shareable one-pager (a README hero image, a social card, a printed poster) — **not** for in-app lesson diagrams — the reference target is a flat-vector, colorful, poster-style composition:
