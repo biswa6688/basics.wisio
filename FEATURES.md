@@ -21,7 +21,7 @@ Status snapshot of what exists in the app today. Updated in the same commit as a
 | Number Systems | `number-systems` | Shipped |
 | How a Computer Works | `how-computers-work` | Shipped |
 | Input & Output Devices | `input-output` | Shipped |
-| Operating Systems | `operating-systems` | Not started |
+| Operating Systems | `operating-systems` | Shipped |
 | Networking Basics | `networking-basics` | Not started |
 | Internet Basics | `internet-basics` | Not started |
 
@@ -44,3 +44,9 @@ Key files: `src/pages/topics/how-computers-work.tsx`, `src/components/illustrati
 Animated Input → Process → Output flow diagram and a grouped device gallery (input / output / both).
 
 Key files: `src/pages/topics/input-output.tsx`, `src/components/illustrations/IoFlow.tsx`, `src/components/illustrations/DeviceGallery.tsx`
+
+### Operating Systems (`operating-systems`)
+
+App/OS/hardware layer diagram, process/file/memory management overview cards, and an animated CPU time-slicing timeline showing how multitasking feels instant on one core.
+
+Key files: `src/pages/topics/operating-systems.tsx`, `src/components/illustrations/OsLayers.tsx`, `src/components/illustrations/ProcessTimeline.tsx`
