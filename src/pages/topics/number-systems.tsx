@@ -8,6 +8,7 @@ import { GlossaryTerm } from '../../components/education/GlossaryTerm'
 import { KeyTakeaways } from '../../components/education/KeyTakeaways'
 import { Quiz } from '../../components/education/Quiz'
 import { MultipleChoice } from '../../components/education/MultipleChoice'
+import { TopicPhoto } from '../../components/education/TopicPhoto'
 
 const steps = [
   { label: 'You type', detail: 'A key press sends an electrical signal into the machine.' },
@@ -26,11 +27,22 @@ export default function NumberSystems() {
             detect ten voltage levels for decimal digits would make hardware far more error-prone.
           </InfoCard>
           <InfoCard icon={<Cable className="h-4 w-4" strokeWidth={1.75} />} title="On / Off = 1 / 0" accent="#0891b2">
-            Every bit is just the state of one switch. String enough switches together and you can represent
-            any number, letter, image, or sound.
+            Every <GlossaryTerm term="bit" definition="The smallest unit of data a computer stores: a single 0 or 1." /> is
+            just the state of one switch. String enough switches together and you can represent any number,
+            letter, image, or sound.
           </InfoCard>
         </div>
       </Section>
+
+      <TopicPhoto
+        src="/photos/binary-code.jpg"
+        alt="Rows of glowing binary digits, 0s and 1s"
+        caption="Every value a computer stores eventually comes down to patterns like this."
+        author="Graph+sas"
+        authorUrl="https://commons.wikimedia.org/wiki/File:Binary-code.png"
+        license="CC BY-SA 4.0"
+        licenseUrl="https://creativecommons.org/licenses/by-sa/4.0/"
+      />
 
       <Section title="From a keystroke to a bit pattern">
         <StepFlow steps={steps} accent="#16a34a" />

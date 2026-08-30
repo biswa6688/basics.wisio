@@ -1,6 +1,6 @@
 # Illustration Guidelines
 
-Wisio has **two distinct illustration styles for two distinct jobs**. Don't mix them — a lesson diagram that looks like a marketing poster (or vice versa) reads as inconsistent.
+Wisio has **three distinct visual styles for three distinct jobs**. Don't mix them — a lesson diagram that looks like a marketing poster (or vice versa) reads as inconsistent.
 
 ## 1. In-lesson diagrams (what's built today)
 
@@ -39,9 +39,20 @@ For any *future* shareable one-pager (a README hero image, a social card, a prin
 - The Wisio owl mark and wordmark anchor the top
 - Still green-dominant and still uses the same brand palette, but leans decorative/inviting rather than technical
 
-**Why two styles**: a lesson diagram's job is to explain a mechanism precisely — outlines and restraint keep it legible as a technical reference. A marketing infographic's job is to be glanced at and shared — it can afford to be denser and more colorful. Building one style with both jobs in mind produces something that does neither well.
-
 **Tooling note**: if a marketing infographic is ever produced, it does not need the Gemini-based `infographic` skill (installed for hand-drawn-style diagrams, a third style not used here) — the flat-vector poster style is achievable directly as an SVG/HTML composition, consistent with how every other illustration in this app is built (see [ARCHITECTURE.md](./ARCHITECTURE.md) on why inline SVG is preferred over generated raster images).
+
+## 3. Real reference photos (added 2026-08-30)
+
+Each of the 8 lessons also carries one real photo alongside its diagrams — an abacus, a CPU macro shot, a server rack, and so on — via `TopicPhoto` (`src/components/education/TopicPhoto.tsx`). This is a deliberate, narrow exception to the "no raster images" rule in section 1, for a different job than a diagram: a diagram explains a mechanism precisely (needs to be theme-aware, stylized, controlled); a reference photo just shows what the real thing looks like, which a photo does better than any illustration could.
+
+**Hard rule: every photo must have a verified, reusable license, checked on its own file page — never assumed from a search result or category.** General web image search returns overwhelmingly copyrighted material with no reuse rights; using it in a published app is a real infringement risk, not a style choice. In practice this means:
+
+- **Source from Wikimedia Commons first.** Every file has its own explicit license tag, checkable independently of where it was found.
+- **Verify the exact license and author on the file's page itself** before downloading — don't infer from a category listing or a search snippet, and don't trust a stock-photo site's own "free" label at face value (Unsplash in particular mixes free "Unsplash License" results with paid "Unsplash+ License" results in the same search, with no reliable way to tell them apart except opening each photo's page).
+- **Public domain and CC0 need no attribution**; CC-BY-SA (the most common Commons license) and GPL do — `TopicPhoto` always renders a caption crediting the author and linking the exact license, which is the actual compliance mechanism, not decoration. See [PHOTO_CREDITS.md](./PHOTO_CREDITS.md) for the full source table and the process for adding another.
+- **Resize before use.** Commons originals run up to multiple megabytes; re-encode to ~900–1200px wide JPEG before committing (see PHOTO_CREDITS.md for the exact `ffmpeg` command used).
+
+**Why three styles, not one**: a lesson diagram's job is to explain a mechanism precisely — outlines and restraint keep it legible as a technical reference. A marketing infographic's job is to be glanced at and shared — it can afford to be denser and more colorful. A reference photo's job is just to be real. Building one style to do all three jobs produces something that does none of them well.
 
 ## Accessibility for illustrations
 

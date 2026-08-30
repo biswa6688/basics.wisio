@@ -6,6 +6,8 @@ import { ProcessTimeline } from '../../components/illustrations/ProcessTimeline'
 import { ImportantNote } from '../../components/education/ImportantNote'
 import { FlashCard } from '../../components/education/FlashCard'
 import { KeyTakeaways } from '../../components/education/KeyTakeaways'
+import { GlossaryTerm } from '../../components/education/GlossaryTerm'
+import { TopicPhoto } from '../../components/education/TopicPhoto'
 
 export default function OperatingSystems() {
   return (
@@ -42,10 +44,22 @@ export default function OperatingSystems() {
 
       <Section title="How multitasking feels instant">
         <p className="mb-6 text-sm text-text-muted">
-          A single CPU core can only run one instruction at a time. The OS switches between processes so
+          A single CPU core can only run one instruction at a time. The OS performs a{' '}
+          <GlossaryTerm term="context switch" definition="Pausing one process, saving exactly where it left off, and loading another so it can run next." /> so
           fast — milliseconds — that it feels like everything runs simultaneously.
         </p>
         <ProcessTimeline />
+        <div className="mt-5">
+          <TopicPhoto
+            src="/photos/terminal.jpg"
+            alt="A Linux command-line terminal showing text output from several commands"
+            caption="A terminal — one of the most direct ways to talk to an operating system."
+            author="The GNOME Project"
+            authorUrl="https://commons.wikimedia.org/wiki/File:Linux_command-line._Bash._GNOME_Terminal._screenshot.png"
+            license="GPL-2.0+"
+            licenseUrl="https://www.gnu.org/licenses/old-licenses/gpl-2.0.html"
+          />
+        </div>
       </Section>
 
       <Section title="Test yourself">

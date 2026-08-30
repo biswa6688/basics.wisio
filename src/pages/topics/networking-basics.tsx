@@ -5,6 +5,8 @@ import { NetworkMap } from '../../components/illustrations/NetworkMap'
 import { Quiz } from '../../components/education/Quiz'
 import { MultipleChoice } from '../../components/education/MultipleChoice'
 import { KeyTakeaways } from '../../components/education/KeyTakeaways'
+import { GlossaryTerm } from '../../components/education/GlossaryTerm'
+import { TopicPhoto } from '../../components/education/TopicPhoto'
 
 export default function NetworkingBasics() {
   return (
@@ -16,6 +18,17 @@ export default function NetworkingBasics() {
         </p>
         <div className="rounded-xl border border-border bg-bg-subtle p-6">
           <NetworkMap />
+        </div>
+        <div className="mt-5">
+          <TopicPhoto
+            src="/photos/network-switches.jpg"
+            alt="Two network switches with Ethernet cables plugged into them"
+            caption="A network switch — the real-world hardware that plays the router's job in the diagram above."
+            author="Jon 'ShakataGaNai' Davis"
+            authorUrl="https://commons.wikimedia.org/wiki/File:Network_switches.jpg"
+            license="CC BY-SA 3.0"
+            licenseUrl="https://creativecommons.org/licenses/by-sa/3.0/"
+          />
         </div>
       </Section>
 
@@ -33,6 +46,10 @@ export default function NetworkingBasics() {
       </Section>
 
       <Section title="Data travels in packets">
+        <p className="mb-5 text-sm text-text-muted">
+          Large messages don't travel as one giant chunk — they're split into small{' '}
+          <GlossaryTerm term="packets" definition="Small chunks a message is split into for sending, each carrying its own destination address." /> first.
+        </p>
         <div className="grid gap-4 sm:grid-cols-3">
           <InfoCard icon={<PackageCheck className="h-4 w-4" strokeWidth={1.75} />} title="Broken into packets" accent="#16a34a">
             Large messages are split into small packets before being sent, each with source/destination

@@ -8,6 +8,8 @@ import { Timeline } from '../../components/education/Timeline'
 import { Quiz } from '../../components/education/Quiz'
 import { TrueFalse } from '../../components/education/TrueFalse'
 import { KeyTakeaways } from '../../components/education/KeyTakeaways'
+import { GlossaryTerm } from '../../components/education/GlossaryTerm'
+import { TopicPhoto } from '../../components/education/TopicPhoto'
 
 const urlParts = [
   { text: 'https://', label: 'Scheme', detail: 'The protocol used — here, HTTPS (secure HTTP).', color: '#16a34a' },
@@ -41,6 +43,17 @@ export default function InternetBasics() {
         <div className="rounded-xl border border-border bg-bg-subtle p-6">
           <RequestJourney />
         </div>
+        <div className="mt-5">
+          <TopicPhoto
+            src="/photos/fiber-optic.jpg"
+            alt="A bundle of optical fiber cables"
+            caption="Fiber optic cable — light pulses through glass strands like this carry most long-distance internet traffic."
+            author="Cable master / Srleffler"
+            authorUrl="https://commons.wikimedia.org/wiki/File:Optical_fiber_cable.jpg"
+            license="CC BY-SA 3.0"
+            licenseUrl="https://creativecommons.org/licenses/by-sa/3.0/"
+          />
+        </div>
       </Section>
 
       <Section title="Step by step">
@@ -53,7 +66,9 @@ export default function InternetBasics() {
             A human-friendly name (like wisio.example) that stands in for a hard-to-remember IP address.
           </InfoCard>
           <InfoCard icon={<MapPin className="h-4 w-4" strokeWidth={1.75} />} title="DNS" accent="#0891b2">
-            The internet's phonebook — translates domain names into the IP addresses computers actually use.
+            The internet's phonebook — translates domain names into the IP addresses that{' '}
+            <GlossaryTerm term="servers" definition="Computers whose job is to wait for requests and send back the requested page, file, or data." /> actually
+            use.
           </InfoCard>
           <InfoCard icon={<FileText className="h-4 w-4" strokeWidth={1.75} />} title="HTTP" accent="#0c6e31">
             The common language browsers and servers use to request and send back web content.

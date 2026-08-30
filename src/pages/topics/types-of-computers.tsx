@@ -6,6 +6,7 @@ import { RealWorldExample } from '../../components/education/RealWorldExample'
 import { Quiz } from '../../components/education/Quiz'
 import { TrueFalse } from '../../components/education/TrueFalse'
 import { KeyTakeaways } from '../../components/education/KeyTakeaways'
+import { TopicPhoto } from '../../components/education/TopicPhoto'
 
 export default function TypesOfComputers() {
   return (
@@ -69,6 +70,17 @@ export default function TypesOfComputers() {
             What you're almost certainly reading this on — desktops, laptops, and phones. The least powerful
             category per unit, but by far the most widely used.
           </InfoCard>
+        </div>
+        <div className="mt-5">
+          <TopicPhoto
+            src="/photos/datacenter-rack.jpg"
+            alt="A server rack in a data center"
+            caption="A server rack — the kind of hardware mainframes and supercomputers are built from at scale."
+            author="Edmondo"
+            authorUrl="https://commons.wikimedia.org/wiki/File:Datacenter_Rack.jpg"
+            license="CC BY-SA 3.0"
+            licenseUrl="https://creativecommons.org/licenses/by-sa/3.0/"
+          />
         </div>
       </Section>
 

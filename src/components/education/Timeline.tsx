@@ -1,6 +1,8 @@
+import type { ReactNode } from 'react'
+
 export interface TimelineEvent {
   label: string
-  detail: string
+  detail: ReactNode
 }
 
 export function Timeline({ events, accent = '#16a34a' }: { events: TimelineEvent[]; accent?: string }) {

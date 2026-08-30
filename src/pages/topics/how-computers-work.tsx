@@ -7,6 +7,8 @@ import { DidYouKnow } from '../../components/education/DidYouKnow'
 import { Comparison } from '../../components/education/Comparison'
 import { KeyTakeaways } from '../../components/education/KeyTakeaways'
 import { DefinitionCard } from '../../components/education/DefinitionCard'
+import { GlossaryTerm } from '../../components/education/GlossaryTerm'
+import { TopicPhoto } from '../../components/education/TopicPhoto'
 
 export default function HowComputersWork() {
   return (
@@ -20,7 +22,8 @@ export default function HowComputersWork() {
       <Section title="The three core parts">
         <div className="grid gap-4 sm:grid-cols-3">
           <InfoCard icon={<CpuIcon className="h-4 w-4" strokeWidth={1.75} />} title="CPU" accent="#16a34a">
-            The brain. Runs instructions one step at a time, incredibly fast — billions per second.
+            The brain. Runs <GlossaryTerm term="instructions" definition="Tiny, exact commands a CPU can carry out, like 'add these two numbers.'" /> one
+            step at a time, incredibly fast — billions per second.
           </InfoCard>
           <InfoCard icon={<MemoryStick className="h-4 w-4" strokeWidth={1.75} />} title="Memory (RAM)" accent="#0891b2">
             Short-term workspace. Holds whatever the CPU is actively using — cleared when power is off.
@@ -48,9 +51,22 @@ export default function HowComputersWork() {
       <Section title="Why some memory is faster than others">
         <p className="mb-6 text-sm text-text-muted">
           There's a trade-off between speed and size. The fastest memory sits closest to the CPU but can only
-          hold a little; the largest storage is far cheaper per byte but much slower to reach.
+          hold a little; the largest storage is far cheaper per byte but much slower to reach. The{' '}
+          <GlossaryTerm term="cache" definition="A small pool of very fast memory that keeps a copy of data the CPU is likely to need again soon." /> sits
+          right in the middle of that trade-off.
         </p>
         <MemoryHierarchy />
+        <div className="mt-5">
+          <TopicPhoto
+            src="/photos/cpu-macro.jpg"
+            alt="Macro close-up photo of a computer CPU"
+            caption="A real CPU — the chip where fetch, decode, execute, and store actually happen."
+            author="Gormé"
+            authorUrl="https://commons.wikimedia.org/wiki/File:GPU_macro.JPG"
+            license="CC BY-SA 3.0"
+            licenseUrl="https://creativecommons.org/licenses/by-sa/3.0/"
+          />
+        </div>
       </Section>
 
       <Section title="Hardware and software">

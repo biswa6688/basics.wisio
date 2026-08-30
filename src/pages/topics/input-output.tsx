@@ -4,10 +4,12 @@ import { InfoCard } from '../../components/content/InfoCard'
 import { IoFlow } from '../../components/illustrations/IoFlow'
 import { DeviceGallery } from '../../components/illustrations/DeviceGallery'
 import { DefinitionCard } from '../../components/education/DefinitionCard'
+import { GlossaryTerm } from '../../components/education/GlossaryTerm'
 import { RealWorldExample } from '../../components/education/RealWorldExample'
 import { Quiz } from '../../components/education/Quiz'
 import { TrueFalse } from '../../components/education/TrueFalse'
 import { KeyTakeaways } from '../../components/education/KeyTakeaways'
+import { TopicPhoto } from '../../components/education/TopicPhoto'
 
 export default function InputOutput() {
   return (
@@ -33,8 +35,9 @@ export default function InputOutput() {
       <Section title="Two directions, one goal: moving information">
         <div className="grid gap-4 sm:grid-cols-2">
           <InfoCard icon={<LogIn className="h-4 w-4" strokeWidth={1.75} />} title="Input devices" accent="#16a34a">
-            Translate human action (typing, clicking, speaking) or the physical world (light, sound) into
-            signals the computer can process.
+            Translate human action (typing, clicking, speaking) or the physical world (light, sound) into a{' '}
+            <GlossaryTerm term="signal" definition="A stream of electrical pulses a device uses to send information — the raw form input takes before software makes sense of it." /> the
+            computer can process.
           </InfoCard>
           <InfoCard icon={<LogOut className="h-4 w-4" strokeWidth={1.75} />} title="Output devices" accent="#0891b2">
             Translate the computer's internal results back into something humans can see, hear, or hold.
@@ -44,6 +47,17 @@ export default function InputOutput() {
 
       <Section title="Common devices, grouped">
         <DeviceGallery />
+        <div className="mt-5">
+          <TopicPhoto
+            src="/photos/keyboard-mouse.jpg"
+            alt="A computer keyboard with a mouse resting beside it"
+            caption="The two most common input devices — still the fastest way to tell a computer exactly what you want."
+            author="Jreph"
+            authorUrl="https://commons.wikimedia.org/wiki/File:Keyboard_with_mouse.jpg"
+            license="CC BY-SA 3.0"
+            licenseUrl="https://creativecommons.org/licenses/by-sa/3.0/"
+          />
+        </div>
         <div className="mt-5">
           <DefinitionCard
             term="Peripheral"

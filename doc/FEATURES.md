@@ -20,6 +20,8 @@ Status snapshot of what exists in the app today. Updated in the same commit as a
 | Generated illustration (first) | `CpuCycle` regenerated via the `infographic-creator` skill (authoring-time only, no runtime dependency) instead of hand-drawn — see the adaptation checklist in [ILLUSTRATION_GUIDELINES.md](./ILLUSTRATION_GUIDELINES.md) | `src/components/illustrations/CpuCycle.tsx` |
 | Reduced motion | All Framer Motion animations respect OS "reduce motion" setting app-wide | `src/main.tsx` (`MotionConfig reducedMotion="user"`) |
 | Per-page titles | Browser tab title updates per route (home / topics index / each lesson) | `src/hooks/useDocumentTitle.ts` |
+| Real reference photos | One license-verified photo per lesson (Wikimedia Commons only — 2 public domain, 6 CC-BY-SA/GPL), each with an in-page author/license attribution caption | `src/components/education/TopicPhoto.tsx`, `public/photos/*`, [PHOTO_CREDITS.md](./PHOTO_CREDITS.md) |
+| Glossary terms | Inline hover/tap definitions for jargon (bit, cache, packet, context switch, transistor, etc.) across all 8 lessons | `src/components/education/GlossaryTerm.tsx` |
 
 ## Topic lessons
 
