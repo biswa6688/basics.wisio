@@ -6,6 +6,7 @@ All notable changes to this project. Format loosely follows [Keep a Changelog](h
 
 ### Added
 
+- Test suite: Vitest + React Testing Library, covering `ThemeProvider`/`ThemeToggle` persistence and DOM effects, `useProgress`, `useDocumentTitle`, `BitGrid` bit-math correctness, and `MultipleChoice` interaction (15 tests). `npm test` / `npm run test:watch`.
 - Educational component system: `DidYouKnow`, `ImportantNote`, `Warning`, `RealWorldExample` (shared `Callout` base), `KeyTakeaways`, `DefinitionCard`, `Comparison`, `Timeline`, `AnatomyDiagram`, `GlossaryTerm`, a quiz kit (`MultipleChoice`, `TrueFalse`, `Quiz`, `AnswerReveal`), `FlashCard`, `RelatedTopics`, and `LearningPath` (prev/next lesson nav with progress dots)
 - Progress tracking: `useProgress` hook (localStorage-backed) plus `MarkCompleteButton` on every lesson and `ProgressSummary` on the topics index
 - Every lesson now ends with a mark-complete control, related-topics suggestions, and prev/next navigation (via `TopicLayout`)

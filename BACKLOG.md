@@ -21,7 +21,7 @@ All six lessons shipped: Number Systems, How a Computer Works, Input & Output De
 
 ## Nice to have / unscheduled
 
+- [x] Unit/component tests — shipped via Vitest + React Testing Library (see [TESTING.md](./TESTING.md))
 - [ ] Printable/exportable topic summaries
 - [ ] i18n — content translation support
-- [ ] Unit/component tests (Vitest + React Testing Library)
-- [ ] CI pipeline (lint + build + typecheck on PR)
+- [ ] CI pipeline (lint + build + typecheck + test on PR)
