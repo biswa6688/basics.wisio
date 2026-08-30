@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  /* Wisio green — primary brand scale */
+  --color-primary-50: #ecfdf3;
+  --color-primary-100: #d1fae0;
+  --color-primary-200: #a7f3c6;
+  --color-primary-300: #6ee7a3;
+  --color-primary-400: #34d17a;
+  --color-primary-500: #16a34a;
+  --color-primary-600: #0f8a3d;
+  --color-primary-700: #0c6e31;
+  --color-primary-800: #0a5629;
+  --color-primary-900: #084621;
+  --color-primary-950: #032711;
+
+  --color-accent-500: #22d3ee;
+  --color-accent-600: #0891b2;
+}
+
+:root {
+  --color-bg: #ffffff;
+  --color-bg-subtle: #f4faf6;
+  --color-surface: #ffffff;
+  --color-surface-raised: #ffffff;
+  --color-border: #d7ece0;
+  --color-text: #0e1f16;
+  --color-text-muted: #4b6355;
+  --shadow-color: 150 30% 40%;
+}
+
+.dark {
+  --color-bg: #071310;
+  --color-bg-subtle: #0b1a15;
+  --color-surface: #0f221b;
+  --color-surface-raised: #122a21;
+  --color-border: #1d4534;
+  --color-text: #eafaf1;
+  --color-text-muted: #a6c9b8;
+  --shadow-color: 150 60% 2%;
+}
+
+@theme inline {
+  --color-bg: var(--color-bg);
+  --color-bg-subtle: var(--color-bg-subtle);
+  --color-surface: var(--color-surface);
+  --color-surface-raised: var(--color-surface-raised);
+  --color-border: var(--color-border);
+  --color-text: var(--color-text);
+  --color-text-muted: var(--color-text-muted);
+}
+
+html {
+  color-scheme: light;
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+::selection {
+  background-color: var(--color-primary-300);
+  color: var(--color-primary-950);
+}

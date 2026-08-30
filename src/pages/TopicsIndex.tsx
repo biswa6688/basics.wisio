@@ -1,0 +1,20 @@
+import { topics } from '../data/topics'
+import { TopicCard } from '../components/content/TopicCard'
+
+export function TopicsIndex() {
+  return (
+    <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
+      <div className="mb-10 max-w-2xl">
+        <h1 className="text-3xl font-extrabold tracking-tight text-text sm:text-4xl">All topics</h1>
+        <p className="mt-2 text-text-muted">
+          Six illustrated lessons covering the core ideas behind every computer — pick one and start exploring.
+        </p>
+      </div>
+      <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        {topics.map((topic) => (
+          <TopicCard key={topic.slug} topic={topic} />
+        ))}
+      </div>
+    </div>
+  )
+}
