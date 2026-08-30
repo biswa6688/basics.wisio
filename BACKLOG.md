@@ -23,6 +23,5 @@ All six lessons shipped: Number Systems, How a Computer Works, Input & Output De
 
 - [ ] Printable/exportable topic summaries
 - [ ] i18n — content translation support
-- [ ] Animation reduced-motion preference support (`prefers-reduced-motion`)
 - [ ] Unit/component tests (Vitest + React Testing Library)
 - [ ] CI pipeline (lint + build + typecheck on PR)

@@ -6,6 +6,8 @@ All notable changes to this project. Format loosely follows [Keep a Changelog](h
 
 ### Added
 
+- Reduced-motion support: all Framer Motion illustrations respect `prefers-reduced-motion` via app-wide `MotionConfig`
+- Per-page document titles (`useDocumentTitle` hook) for home, topics index, and each lesson
 - Internet Basics lesson: animated click-to-page-load request journey, step-by-step breakdown, domain/DNS/HTTP explainer — completes the v1 core-basics topic set
 - Networking Basics lesson: animated router/device network map, IP vs MAC explainer, packet routing overview
 - Operating Systems lesson: app/OS/hardware layer diagram, process/file/memory overview, animated CPU time-slicing timeline

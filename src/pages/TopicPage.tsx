@@ -2,6 +2,7 @@ import { Navigate, useParams } from 'react-router-dom'
 import { getTopicBySlug } from '../data/topics'
 import { topicPages } from './topics/registry'
 import { TopicLayout } from '../components/content/TopicLayout'
+import { useDocumentTitle } from '../hooks/useDocumentTitle'
 
 function ComingSoon() {
   return (
@@ -15,6 +16,8 @@ function ComingSoon() {
 export function TopicPage() {
   const { slug = '' } = useParams()
   const topic = getTopicBySlug(slug)
+
+  useDocumentTitle(topic ? `${topic.title} — Wisio` : 'Wisio')
 
   if (!topic) return <Navigate to="/topics" replace />
 

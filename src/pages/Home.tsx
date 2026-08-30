@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import { topics } from '../data/topics'
 import { TopicCard } from '../components/content/TopicCard'
 import { HeroComputer } from '../components/illustrations/HeroComputer'
+import { useDocumentTitle } from '../hooks/useDocumentTitle'
 
 const highlights = [
   { icon: '🧩', title: 'Visual first', text: 'Every idea is shown as a diagram before it is explained in words.' },
@@ -11,6 +12,8 @@ const highlights = [
 ]
 
 export function Home() {
+  useDocumentTitle('Wisio — Wisdom, Byte by Byte')
+
   return (
     <div>
       <section className="mx-auto grid max-w-6xl items-center gap-10 px-4 py-14 sm:px-6 lg:grid-cols-2 lg:py-20">

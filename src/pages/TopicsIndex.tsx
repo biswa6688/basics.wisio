@@ -1,7 +1,10 @@
 import { topics } from '../data/topics'
 import { TopicCard } from '../components/content/TopicCard'
+import { useDocumentTitle } from '../hooks/useDocumentTitle'
 
 export function TopicsIndex() {
+  useDocumentTitle('All Topics — Wisio')
+
   return (
     <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
       <div className="mb-10 max-w-2xl">
