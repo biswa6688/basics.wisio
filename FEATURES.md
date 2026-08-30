@@ -23,7 +23,7 @@ Status snapshot of what exists in the app today. Updated in the same commit as a
 | Input & Output Devices | `input-output` | Shipped |
 | Operating Systems | `operating-systems` | Shipped |
 | Networking Basics | `networking-basics` | Shipped |
-| Internet Basics | `internet-basics` | Not started |
+| Internet Basics | `internet-basics` | Shipped |
 
 See [BACKLOG.md](./BACKLOG.md) for planned scope of each, and [TASKS.md](./TASKS.md) for the active work item.
 
@@ -56,3 +56,9 @@ Key files: `src/pages/topics/operating-systems.tsx`, `src/components/illustratio
 Animated router/device network map, IP vs MAC address explainer, and a packet routing/reassembly overview.
 
 Key files: `src/pages/topics/networking-basics.tsx`, `src/components/illustrations/NetworkMap.tsx`
+
+### Internet Basics (`internet-basics`)
+
+Animated click-to-page-load request journey diagram, step-by-step breakdown, and domain/DNS/HTTP explainer cards. Completes the v1 core-basics topic set.
+
+Key files: `src/pages/topics/internet-basics.tsx`, `src/components/illustrations/RequestJourney.tsx`

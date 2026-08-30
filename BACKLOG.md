@@ -2,9 +2,9 @@
 
 Not scheduled yet, or planned beyond the current milestone. Ordered roughly by priority.
 
-## v1 — core topic content (in progress)
+## v1 — core topic content (complete)
 
-- [ ] Internet Basics lesson — "click to page load" journey (DNS → request → response → render)
+All six lessons shipped: Number Systems, How a Computer Works, Input & Output Devices, Operating Systems, Networking Basics, Internet Basics. See [FEATURES.md](./FEATURES.md).
 
 ## v2 — depth & interactivity
 

@@ -20,9 +20,10 @@ Active/near-term work only. Long-range items live in [BACKLOG.md](./BACKLOG.md).
 - [x] Input & Output Devices lesson content + illustrations
 - [x] Operating Systems lesson content + illustrations
 - [x] Networking Basics lesson content + illustrations
+- [x] Internet Basics lesson content + illustrations
 
-## Next up (build one at a time, commit + push before starting the next)
+## v1 complete
 
-1. [ ] Internet Basics lesson content + illustrations
+All 6 core-basics topics are shipped. See [BACKLOG.md](./BACKLOG.md) for v2/v3 scope (interactivity, progress tracking, programming-intro track) — nothing is queued in "Next up" until a v2 item is picked.
 
 Each task above updates: `FEATURES.md`, `TASKS.md` (move item to Done), `CHANGELOG.md`.

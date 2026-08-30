@@ -4,6 +4,7 @@ import HowComputersWork from './how-computers-work'
 import InputOutput from './input-output'
 import OperatingSystems from './operating-systems'
 import NetworkingBasics from './networking-basics'
+import InternetBasics from './internet-basics'
 
 /**
  * Maps a topic slug to its page component. Populated incrementally —
@@ -16,4 +17,5 @@ export const topicPages: Record<string, ComponentType> = {
   'input-output': InputOutput,
   'operating-systems': OperatingSystems,
   'networking-basics': NetworkingBasics,
+  'internet-basics': InternetBasics,
 }

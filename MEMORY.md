@@ -18,5 +18,5 @@ Context and decisions that aren't obvious from the code alone. This is a project
 
 ## Open questions / things to revisit
 
-- No interactivity (converters, quizzes) in v1 — pure illustrated explanation. Revisit after all 6 core topics ship (see BACKLOG v2).
+- v1 (all 6 core-basics topics) shipped 2026-08-30. No interactivity (converters, quizzes) yet — pure illustrated explanation. Next decision point: pick a v2 item from BACKLOG.md (interactive converter widget, quizzes, or progress tracking).
 - No automated tests yet (unscheduled in BACKLOG) — verification is manual `npm run build` + browser check per feature.
